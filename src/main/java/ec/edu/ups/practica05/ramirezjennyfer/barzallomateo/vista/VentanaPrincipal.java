@@ -490,8 +490,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             desktopPane.add(ventanaEliminarCantante);
         }
         ventanaEliminarCantante.setVisible(true);
-        System.out.println("");
-        System.out.println("");
+        
     }//GEN-LAST:event_itemMenuEliminarCantanteActionPerformed
 
     private void itemMenuCrearCantanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemMenuCrearCantanteActionPerformed
