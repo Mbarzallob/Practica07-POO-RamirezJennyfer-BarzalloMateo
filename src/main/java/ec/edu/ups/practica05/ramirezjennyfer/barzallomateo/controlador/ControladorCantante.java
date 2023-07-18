@@ -17,6 +17,7 @@ import java.util.List;
 public class ControladorCantante {
 
     private Cantante cantante;
+    
     private ICantanteDAO cantanteDAO;
 
     public ControladorCantante(CantanteDAO cantanteDAO) {
@@ -25,6 +26,7 @@ public class ControladorCantante {
 
     public void agregarCantante(Cantante cantante) {
         this.cantante = cantante;
+        System.out.println("s");
         cantanteDAO.create(cantante);
     }
 
