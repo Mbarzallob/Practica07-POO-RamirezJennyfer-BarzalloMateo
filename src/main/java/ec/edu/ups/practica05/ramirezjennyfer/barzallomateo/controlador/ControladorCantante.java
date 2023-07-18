@@ -17,6 +17,7 @@ import java.util.List;
 public class ControladorCantante {
 
     private Cantante cantante;
+    
     private ICantanteDAO cantanteDAO;
 
     public ControladorCantante(CantanteDAO cantanteDAO) {
