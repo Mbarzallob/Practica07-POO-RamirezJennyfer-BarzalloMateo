@@ -26,7 +26,6 @@ public class ControladorCantante {
 
     public void agregarCantante(Cantante cantante) {
         this.cantante = cantante;
-        System.out.println("s");
         cantanteDAO.create(cantante);
     }
 
