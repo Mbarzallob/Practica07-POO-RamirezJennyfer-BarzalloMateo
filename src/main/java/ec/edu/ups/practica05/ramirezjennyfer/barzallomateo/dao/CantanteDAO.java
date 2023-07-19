@@ -59,49 +59,45 @@ public class CantanteDAO implements ICantanteDAO {
             return 0;
         }
     }
-
-    @Override
-    public void create(Cantante cantante) {
-
-        try {
-            archivo.seek(this.tamañoArchivo());
-            //0
-            archivo.writeInt(cantante.getCodigo());
-            //4
-            archivo.writeUTF(this.relleno(cantante.getNombre(), 25));
-            //31
-            archivo.writeUTF(this.relleno(cantante.getApellido(), 25));
-            //58
-            archivo.writeInt(cantante.getEdad());
-            //62
-            archivo.writeUTF(this.relleno(cantante.getNacionalidad(), 20));
-            //84
-            archivo.writeDouble(cantante.getSalario());
-            //92
-            archivo.writeUTF(this.relleno(cantante.getNombreArtistico(), 25));
-            //119
-            archivo.writeUTF(this.relleno(cantante.getGeneroMusical(), 20));
-            //139
-            archivo.writeInt(cantante.getNumeroDeSencillos());
-            //143
-            archivo.writeInt(cantante.getNumeroDeConciertos());
-            //147
-            archivo.writeInt(cantante.getNumeroDeGiras());
-            //151
-            for (int i = 0; i < 10; i++) {
-                //4
-                archivo.writeInt(0);
-                //17
-                archivo.writeUTF(this.relleno("", 15));
-                //4
-                archivo.writeInt(0);
-            }
-            //250
-            conteoCantante++;
-        } catch (IOException e) {
-
+@Override
+public void create(Cantante cantante) {
+    try {
+        archivo.seek(this.tamañoArchivo());
+        //0
+        archivo.writeInt(cantante.getCodigo());
+        //4
+        archivo.writeUTF(this.relleno(cantante.getNombre(), 25));
+        //31
+        archivo.writeUTF(this.relleno(cantante.getApellido(), 25));
+        //58
+        archivo.writeInt(cantante.getEdad());
+        //62
+        archivo.writeUTF(this.relleno(cantante.getNacionalidad(), 20));
+        //84
+        archivo.writeDouble(cantante.getSalario());
+        //92
+        archivo.writeUTF(this.relleno(cantante.getNombreArtistico(), 25));
+        //119
+        archivo.writeUTF(this.relleno(cantante.getGeneroMusical(), 20));
+        //139
+        archivo.writeInt(cantante.getNumeroDeSencillos());
+        //143
+        archivo.writeInt(cantante.getNumeroDeConciertos());
+        //147
+        archivo.writeInt(cantante.getNumeroDeGiras());
+        //151
+        for (int i = 0; i < 10; i++) {
+            int u = (int) i * 29;
+            archivo.writeInt(0 + u);
+            archivo.writeUTF(this.relleno("", 15 + u));
+            archivo.writeInt(0 + u);
         }
+        //251
+        conteoCantante++;
+    } catch (IOException e) {
+        
     }
+}
 
     @Override
     public Cantante read(int codigo) {
@@ -126,22 +122,22 @@ public class CantanteDAO implements ICantanteDAO {
                     String nombreArtistico = archivo.readUTF();
                     archivo.seek(119 + o);
                     String genero = archivo.readUTF();
-                    archivo.seek(139 + o);
-                    int numSencillos = archivo.readInt();
                     archivo.seek(143 + o);
-                    int numConciertos = archivo.readInt();
+                    int numSencillos = archivo.readInt();
                     archivo.seek(147 + o);
+                    int numConciertos = archivo.readInt();
+                    archivo.seek(151 + o);
                     int numGiras = archivo.readInt();
                     Cantante cantante = new Cantante(nombreArtistico, genero, numSencillos, numConciertos, numGiras, cod, nombre, apellido, edad, nacionalidad, salario);
 
-                    archivo.seek(151 + o);
+                    archivo.seek(161 + o);
                     for (int j = 0; j < conteoDisco; j++) {
-                        int u = (int) j * 25;
-                        archivo.seek(151 + o + u);
+                        int u = (int) j * 29;
+                        archivo.seek(161 + o + u);
                         int codigoDisco = archivo.readInt();
-                        archivo.seek(155 + o + u);
+                        archivo.seek(165  + o + u);
                         String nombreDisco = archivo.readUTF();
-                        archivo.seek(159 + o + u);
+                        archivo.seek(195  + o + u);
                         int anio = archivo.readInt();
                         cantante.agregarDisco(codigoDisco, nombreDisco, anio);
                     }
