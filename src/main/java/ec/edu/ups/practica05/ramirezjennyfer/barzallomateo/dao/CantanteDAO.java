@@ -266,7 +266,7 @@ public void create(Cantante cantante) {
         cantante.actualizarDisco(codigo, nombre, anioDeLanzamiento);
     }
 
-    @Override
+        @Override
     public void deleteDisco(Cantante cantante, int codigo, String nombre, int anioDeLanzamiento) {
         cantante.eliminarDisco(codigo, nombre, anioDeLanzamiento);
     }

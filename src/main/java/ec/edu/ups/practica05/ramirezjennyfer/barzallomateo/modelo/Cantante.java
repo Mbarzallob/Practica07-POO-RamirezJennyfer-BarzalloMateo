@@ -27,15 +27,13 @@ public class Cantante extends Persona {
     }
 
     // Constructor donde se encuentran los datos de la clase Cantante más los atributos de la clase padre Persona
-    public Cantante(String nombreArtistico, String generoMusical, int numeroDeSencillos, int numeroDeConciertos, int numeroDeGiras, int codigo, String nombre, String apellido, int edad, String nacionalidad, double salario) {
+    public Cantante(String nombreArtistico, String generoMusical, int numeroDeConciertos, int numeroDeGiras, int codigo, String nombre, String apellido, int edad, String nacionalidad, double salario) {
         super(codigo, nombre, apellido, edad, nacionalidad, salario);
         this.nombreArtistico = nombreArtistico;
         this.generoMusical = generoMusical;
-        this.numeroDeSencillos = numeroDeSencillos;
         this.numeroDeConciertos = numeroDeConciertos;
         this.numeroDeGiras = numeroDeGiras;
         discografia = new ArrayList<>();
-        super.setSalario(calcularSalario());
     }
 
     // Getter y setter: Encapsulamiento de los atributos
@@ -57,14 +55,12 @@ public class Cantante extends Persona {
         this.generoMusical = generoMusical;
     }
 
-    // Getter y setter del Atributo numeroDeSencillos
+    // Getter  del Atributo numeroDeSencillos
     public int getNumeroDeSencillos() {
-        return numeroDeSencillos;
+        return discografia.size();
     }
 
-    public void setNumeroDeSencillos(int numeroDeSencillos) {
-        this.numeroDeSencillos = numeroDeSencillos;
-    }
+
 
     // Getter y setter del Atributo numeroDeConciertos
     public int getNumeroDeConciertos() {

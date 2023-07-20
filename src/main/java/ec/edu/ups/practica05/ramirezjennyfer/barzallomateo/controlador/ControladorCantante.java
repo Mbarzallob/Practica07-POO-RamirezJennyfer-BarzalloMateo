@@ -50,7 +50,6 @@ public class ControladorCantante {
             cantanteEncontrado.setNombreArtistico(cantante.getNombreArtistico());
             cantanteEncontrado.setNumeroDeConciertos(cantante.getNumeroDeConciertos());
             cantanteEncontrado.setNumeroDeGiras(cantante.getNumeroDeGiras());
-            cantanteEncontrado.setNumeroDeSencillos(cantante.getNumeroDeSencillos());
             cantanteEncontrado.setSalario(cantante.getSalario());
             cantanteDAO.update(cantanteEncontrado);
             return true;
