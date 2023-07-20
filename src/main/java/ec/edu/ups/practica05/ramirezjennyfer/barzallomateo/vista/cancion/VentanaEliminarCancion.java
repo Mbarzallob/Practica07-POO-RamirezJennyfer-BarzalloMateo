@@ -88,33 +88,35 @@ public class VentanaEliminarCancion extends javax.swing.JInternalFrame {
 
         jLabel1.setBackground(new java.awt.Color(255, 204, 102));
         jLabel1.setFont(new java.awt.Font("Stay Dreaming", 1, 36)); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/compositor.png"))); // NOI18N
         jLabel1.setText("Datos del Compositor");
 
-        jLabel2.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
-        jLabel2.setText("Codigo");
+        jLabel2.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
+        jLabel2.setText("Codigo:");
 
-        jLabel3.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
-        jLabel3.setText("Nombre");
+        jLabel3.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
+        jLabel3.setText("Nombre:");
 
-        jLabel4.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
-        jLabel4.setText("Apellido");
+        jLabel4.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
+        jLabel4.setText("Apellido:");
 
-        jLabel8.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
-        jLabel8.setText("Numero de composiciones");
+        jLabel8.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
+        jLabel8.setText("Número de composiciones:");
 
-        txtCodigo.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        txtCodigo.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
 
-        txtNombre.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        txtNombre.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         txtNombre.setEnabled(false);
 
-        txtApellido.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        txtApellido.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         txtApellido.setEnabled(false);
 
-        txtNumComposiciones.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        txtNumComposiciones.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         txtNumComposiciones.setEnabled(false);
 
         btnSalir.setBackground(new java.awt.Color(255, 204, 204));
-        btnSalir.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        btnSalir.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
+        btnSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/salirr.png"))); // NOI18N
         btnSalir.setText("Salir");
         btnSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -123,7 +125,8 @@ public class VentanaEliminarCancion extends javax.swing.JInternalFrame {
         });
 
         btnBuscar.setBackground(new java.awt.Color(204, 255, 255));
-        btnBuscar.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        btnBuscar.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
+        btnBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/buscar.png"))); // NOI18N
         btnBuscar.setText("Buscar");
         btnBuscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -132,25 +135,27 @@ public class VentanaEliminarCancion extends javax.swing.JInternalFrame {
         });
 
         jLabel5.setFont(new java.awt.Font("Stay Dreaming", 1, 36)); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cancionn.png"))); // NOI18N
         jLabel5.setText("Eliminar Cancion");
 
-        jLabel6.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
-        jLabel6.setText("Codigo");
+        jLabel6.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
+        jLabel6.setText("Código:");
 
-        jLabel7.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
-        jLabel7.setText("Titulo");
+        jLabel7.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
+        jLabel7.setText("Titulo:");
 
-        jLabel9.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
-        jLabel9.setText("Letra");
+        jLabel9.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
+        jLabel9.setText("Letra:");
 
-        txtTitulo.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        txtTitulo.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         txtTitulo.setEnabled(false);
 
-        txtLetra.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        txtLetra.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         txtLetra.setEnabled(false);
 
-        btnSeleccionar.setBackground(new java.awt.Color(255, 204, 102));
-        btnSeleccionar.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        btnSeleccionar.setBackground(new java.awt.Color(255, 153, 102));
+        btnSeleccionar.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
+        btnSeleccionar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/seleccionarr.png"))); // NOI18N
         btnSeleccionar.setText("Seleccionar");
         btnSeleccionar.setEnabled(false);
         btnSeleccionar.addActionListener(new java.awt.event.ActionListener() {
@@ -159,8 +164,9 @@ public class VentanaEliminarCancion extends javax.swing.JInternalFrame {
             }
         });
 
-        btnCancelarSeleccion.setBackground(new java.awt.Color(255, 204, 102));
-        btnCancelarSeleccion.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        btnCancelarSeleccion.setBackground(new java.awt.Color(255, 153, 102));
+        btnCancelarSeleccion.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
+        btnCancelarSeleccion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cancelarr.png"))); // NOI18N
         btnCancelarSeleccion.setText("Cancelar seleccion");
         btnCancelarSeleccion.setEnabled(false);
         btnCancelarSeleccion.addActionListener(new java.awt.event.ActionListener() {
@@ -169,7 +175,7 @@ public class VentanaEliminarCancion extends javax.swing.JInternalFrame {
             }
         });
 
-        cbxCancion.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        cbxCancion.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         cbxCancion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Canciones" }));
         cbxCancion.setEnabled(false);
         cbxCancion.addActionListener(new java.awt.event.ActionListener() {
@@ -179,7 +185,8 @@ public class VentanaEliminarCancion extends javax.swing.JInternalFrame {
         });
 
         btnEliminarDisco.setBackground(new java.awt.Color(255, 204, 204));
-        btnEliminarDisco.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        btnEliminarDisco.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
+        btnEliminarDisco.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cancionp.png"))); // NOI18N
         btnEliminarDisco.setText("Eliminar cancion");
         btnEliminarDisco.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -187,10 +194,10 @@ public class VentanaEliminarCancion extends javax.swing.JInternalFrame {
             }
         });
 
-        jLabel10.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
-        jLabel10.setText("Duracion");
+        jLabel10.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
+        jLabel10.setText("Duración:");
 
-        txtDuracion.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        txtDuracion.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         txtDuracion.setEnabled(false);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -200,10 +207,7 @@ public class VentanaEliminarCancion extends javax.swing.JInternalFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(184, 184, 184)
-                        .addComponent(jLabel1))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
+                        .addGap(29, 29, 29)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel4)
                             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -211,50 +215,48 @@ public class VentanaEliminarCancion extends javax.swing.JInternalFrame {
                                     .addComponent(jLabel2)
                                     .addComponent(jLabel3)
                                     .addComponent(jLabel8))
-                                .addGap(58, 58, 58)
+                                .addGap(21, 21, 21)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(btnBuscar)
-                                        .addGap(207, 207, 207)
-                                        .addComponent(btnSalir))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(txtCodigo, javax.swing.GroupLayout.DEFAULT_SIZE, 154, Short.MAX_VALUE)
-                                            .addComponent(txtNombre)
-                                            .addComponent(txtApellido))
-                                        .addGap(34, 34, 34)
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(btnSeleccionar)
-                                            .addComponent(btnCancelarSeleccion))
-                                        .addGap(50, 50, 50)
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel6)
-                                            .addComponent(jLabel7)
-                                            .addComponent(jLabel9)))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(txtNumComposiciones, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 211, Short.MAX_VALUE)
-                                        .addComponent(jLabel10)
-                                        .addGap(11, 11, 11)))))))
+                                    .addComponent(txtCodigo, javax.swing.GroupLayout.DEFAULT_SIZE, 199, Short.MAX_VALUE)
+                                    .addComponent(txtNombre)
+                                    .addComponent(txtApellido)
+                                    .addComponent(txtNumComposiciones))
+                                .addGap(25, 25, 25)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(btnSeleccionar, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btnCancelarSeleccion))
+                                .addGap(29, 29, 29)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel10)
+                                    .addComponent(jLabel6)
+                                    .addComponent(jLabel7)
+                                    .addComponent(jLabel9)))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(229, 229, 229)
+                        .addComponent(btnBuscar)))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel5)
-                        .addGap(173, 173, 173))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtLetra)
-                            .addComponent(txtTitulo)
-                            .addComponent(txtDuracion, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(cbxCancion, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGap(78, 78, 78)
-                                        .addComponent(btnEliminarDisco)))
-                                .addGap(0, 0, Short.MAX_VALUE)))
-                        .addContainerGap())))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(txtDuracion)
+                            .addComponent(txtLetra, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtTitulo, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(cbxCancion, javax.swing.GroupLayout.Alignment.LEADING, 0, 239, Short.MAX_VALUE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnEliminarDisco)
+                        .addGap(102, 102, 102))))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(184, 184, 184)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel5)
+                .addGap(62, 62, 62))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(390, 390, 390))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -270,52 +272,51 @@ public class VentanaEliminarCancion extends javax.swing.JInternalFrame {
                             .addComponent(jLabel2)
                             .addComponent(txtCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnSeleccionar))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel3)
-                            .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(6, 6, 6)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel4)
-                            .addComponent(txtApellido, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel3)
+                                    .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(6, 6, 6)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel4)
+                                    .addComponent(txtApellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(btnCancelarSeleccion))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel8)
-                            .addComponent(txtNumComposiciones, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(58, 58, 58)
+                            .addComponent(txtNumComposiciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(21, 21, 21)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btnBuscar)
-                            .addComponent(btnSalir)))
+                            .addComponent(btnEliminarDisco)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel6)
-                            .addComponent(cbxCancion, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(cbxCancion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel7)
-                            .addComponent(txtTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnCancelarSeleccion))
-                        .addGap(18, 18, 18)
+                            .addComponent(txtTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel9)
                             .addComponent(txtLetra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(txtDuracion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel10))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btnEliminarDisco)))
-                .addContainerGap(9, Short.MAX_VALUE))
+                            .addComponent(jLabel10))))
+                .addGap(18, 18, 18)
+                .addComponent(btnSalir)
+                .addContainerGap(21, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
