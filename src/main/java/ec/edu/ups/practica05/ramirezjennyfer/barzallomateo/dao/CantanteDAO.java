@@ -21,14 +21,11 @@ import java.util.List;
 public class CantanteDAO implements ICantanteDAO {
 
     RandomAccessFile archivo;
-    int conteoCantante;
-    int conteoDisco;
 
     public CantanteDAO() {
         archivo = instanciaRAF();
         listaCantantes = new ArrayList<>();
-        conteoCantante = 1;
-        conteoDisco = 0;
+
     }
 
     private RandomAccessFile instanciaRAF() {
@@ -59,91 +56,77 @@ public class CantanteDAO implements ICantanteDAO {
             return 0;
         }
     }
-@Override
-public void create(Cantante cantante) {
-    try {
-        archivo.seek(this.tamañoArchivo());
-        //0
-        archivo.writeInt(cantante.getCodigo());
-        //4
-        archivo.writeUTF(this.relleno(cantante.getNombre(), 25));
-        //31
-        archivo.writeUTF(this.relleno(cantante.getApellido(), 25));
-        //58
-        archivo.writeInt(cantante.getEdad());
-        //62
-        archivo.writeUTF(this.relleno(cantante.getNacionalidad(), 20));
-        //84
-        archivo.writeDouble(cantante.getSalario());
-        //92
-        archivo.writeUTF(this.relleno(cantante.getNombreArtistico(), 25));
-        //119
-        archivo.writeUTF(this.relleno(cantante.getGeneroMusical(), 20));
-        //139
-        archivo.writeInt(cantante.getNumeroDeSencillos());
-        //143
-        archivo.writeInt(cantante.getNumeroDeConciertos());
-        //147
-        archivo.writeInt(cantante.getNumeroDeGiras());
-        //151
-        for (int i = 0; i < 10; i++) {
-            int u = (int) i * 29;
-            archivo.writeInt(0 + u);
-            archivo.writeUTF(this.relleno("", 15 + u));
-            archivo.writeInt(0 + u);
+
+    @Override
+    public void create(Cantante cantante) {
+        try {
+            archivo.seek(this.tamañoArchivo());
+
+            archivo.writeInt(cantante.getCodigo());
+
+            archivo.writeUTF(this.relleno(cantante.getNombre(), 25));
+
+            archivo.writeUTF(this.relleno(cantante.getApellido(), 25));
+
+            archivo.writeInt(cantante.getEdad());
+
+            archivo.writeUTF(this.relleno(cantante.getNacionalidad(), 20));
+
+            archivo.writeDouble(cantante.getSalario());
+
+            archivo.writeUTF(this.relleno(cantante.getNombreArtistico(), 25));
+
+            archivo.writeUTF(this.relleno(cantante.getGeneroMusical(), 20));
+
+            archivo.writeInt(cantante.getNumeroDeConciertos());
+
+            archivo.writeInt(cantante.getNumeroDeGiras());
+            //149
+            for (int i = 0; i < 10; i++) {
+                archivo.writeInt(0);
+                archivo.writeUTF(this.relleno("", 15));
+                archivo.writeInt(0);
+            }
+
+        } catch (IOException e) {
+
         }
-        //251
-        conteoCantante++;
-    } catch (IOException e) {
-        
     }
-}
 
     @Override
     public Cantante read(int codigo) {
         try {
-            for (int i = 0; i < conteoCantante; i++) {
-                int o = (int) (i * 250);
-                archivo.seek(0 + o);
+            archivo.seek(0);
+
+            for (int i = 0; i < this.tamañoArchivo(); i += 399) {
+                archivo.seek(i);
                 if (archivo.readInt() == codigo) {
-
+                    archivo.seek(i);
                     int cod = archivo.readInt();
-                    archivo.seek(4 + o);
                     String nombre = archivo.readUTF();
-                    archivo.seek(31 + o);
                     String apellido = archivo.readUTF();
-                    archivo.seek(58 + o);
                     int edad = archivo.readInt();
-                    archivo.seek(62 + o);
                     String nacionalidad = archivo.readUTF();
-                    archivo.seek(84 + o);
                     double salario = archivo.readDouble();
-                    archivo.seek(92 + o);
                     String nombreArtistico = archivo.readUTF();
-                    archivo.seek(119 + o);
                     String genero = archivo.readUTF();
-                    archivo.seek(143 + o);
-                    int numSencillos = archivo.readInt();
-                    archivo.seek(147 + o);
                     int numConciertos = archivo.readInt();
-                    archivo.seek(151 + o);
                     int numGiras = archivo.readInt();
-                    Cantante cantante = new Cantante(nombreArtistico, genero, numSencillos, numConciertos, numGiras, cod, nombre, apellido, edad, nacionalidad, salario);
+                    Cantante cantante = new Cantante(nombreArtistico, genero, numConciertos, numGiras, cod, nombre, apellido, edad, nacionalidad, salario);
 
-                    archivo.seek(161 + o);
-                    for (int j = 0; j < conteoDisco; j++) {
-                        int u = (int) j * 29;
-                        archivo.seek(161 + o + u);
+                    for (int j = 0; j < 10; j++) {
+
                         int codigoDisco = archivo.readInt();
-                        archivo.seek(165  + o + u);
-                        String nombreDisco = archivo.readUTF();
-                        archivo.seek(195  + o + u);
-                        int anio = archivo.readInt();
-                        cantante.agregarDisco(codigoDisco, nombreDisco, anio);
+                        if (codigoDisco != 0) {
+                            String nombreDisco = archivo.readUTF();
+                            int anio = archivo.readInt();
+                            cantante.agregarDisco(codigoDisco, nombreDisco, anio);
+                        } else {
+                            return cantante;
+                        }
+
                     }
                     return cantante;
-                } else {
-                    return null;
                 }
 
             }
@@ -152,65 +135,95 @@ public void create(Cantante cantante) {
         }
         return null;
     }
-//
-//    @Override
-//    public void update(Cantante cantante) {
-//        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-//    }
-//
-//    @Override
-//    public void delete(Cantante cantante) {
-//        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-//    }
-//
-//    @Override
-//    public List<Cantante> findAll() {
-//        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-//    }
-//
-//    @Override
-//    public Cantante buscarPorDisco(String nombre) {
-//        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-//    }
-//
-//    @Override
-//    public void createDisco(Cantante cantante, int codigo, String nombre, int anioDeLanzamiento) {
-//        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-//    }
-//
-//    @Override
-//    public Disco readDisco(Cantante cantante, int codigo) {
-//        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-//    }
-//
-//    @Override
-//    public void updateDisco(Cantante cantante, int codigo, String nombre, int anioDeLanzamiento) {
-//        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-//    }
-//
-//    @Override
-//    public void deleteDisco(Cantante cantante, int codigo, String nombre, int anioDeLanzamiento) {
-//        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-//    }
-//
-//    @Override
-//    public List<Disco> findAllDisco(Cantante cantante) {
-//        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-//    }
-
-    private List<Cantante> listaCantantes;
 
     @Override
     public void update(Cantante cantante) {
+        try {
+            archivo.seek(0);
+            for (int i = 0; i < this.tamañoArchivo(); i += 399) {
+                archivo.seek(i);
+                if (archivo.readInt() == cantante.getCodigo()) {
+                    archivo.seek(i);
+                    archivo.writeInt(cantante.getCodigo());
 
-        for (int i = 0; i < listaCantantes.size(); i++) {
-            Cantante c = listaCantantes.get(i);
-            if (c.getCodigo() == cantante.getCodigo()) {
-                listaCantantes.set(i, cantante);
-                break;
+                    archivo.writeUTF(this.relleno(cantante.getNombre(), 25));
+
+                    archivo.writeUTF(this.relleno(cantante.getApellido(), 25));
+
+                    archivo.writeInt(cantante.getEdad());
+
+                    archivo.writeUTF(this.relleno(cantante.getNacionalidad(), 20));
+
+                    archivo.writeDouble(cantante.getSalario());
+
+                    archivo.writeUTF(this.relleno(cantante.getNombreArtistico(), 25));
+
+                    archivo.writeUTF(this.relleno(cantante.getGeneroMusical(), 20));
+
+                    archivo.writeInt(cantante.getNumeroDeConciertos());
+
+                    archivo.writeInt(cantante.getNumeroDeGiras());
+                    if (cantante.listarDiscos() != null) {
+                        for (Disco disco : cantante.listarDiscos()) {
+                            archivo.writeInt(disco.getCodigo());
+                            archivo.writeUTF(this.relleno(disco.getNombre(), 15));
+                            archivo.writeInt(disco.getAnioDeLanzamiento());
+                        }
+                    } else {
+                        for (int j = 0; j < 10; j++) {
+                            archivo.writeInt(0);
+                            archivo.writeUTF(this.relleno("", 15));
+                            archivo.writeInt(0);
+                        }
+                    }
+                }
             }
+
+        } catch (IOException e) {
         }
     }
+    //
+    //    @Override
+    //    public void delete(Cantante cantante) {
+    //        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    //    }
+    //
+    //    @Override
+    //    public List<Cantante> findAll() {
+    //        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    //    }
+    //
+    //    @Override
+    //    public Cantante buscarPorDisco(String nombre) {
+    //        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    //    }
+    //
+    //    @Override
+    //    public void createDisco(Cantante cantante, int codigo, String nombre, int anioDeLanzamiento) {
+    //        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    //    }
+    //
+    //    @Override
+    //    public Disco readDisco(Cantante cantante, int codigo) {
+    //        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    //    }
+    //
+    //    @Override
+    //    public void updateDisco(Cantante cantante, int codigo, String nombre, int anioDeLanzamiento) {
+    //        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    //    }
+    //
+    //    @Override
+    //    public void deleteDisco(Cantante cantante, int codigo, String nombre, int anioDeLanzamiento) {
+    //        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    //    }
+    //
+    //    @Override
+    //    public List<Disco> findAllDisco(Cantante cantante) {
+    //        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    //    }
+
+    private List<Cantante> listaCantantes;
 
     @Override
     public void delete(Cantante cantante) {
@@ -266,7 +279,7 @@ public void create(Cantante cantante) {
         cantante.actualizarDisco(codigo, nombre, anioDeLanzamiento);
     }
 
-        @Override
+    @Override
     public void deleteDisco(Cantante cantante, int codigo, String nombre, int anioDeLanzamiento) {
         cantante.eliminarDisco(codigo, nombre, anioDeLanzamiento);
     }
