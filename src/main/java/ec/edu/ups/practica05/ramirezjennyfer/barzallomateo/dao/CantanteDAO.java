@@ -86,7 +86,6 @@ public class CantanteDAO implements ICantanteDAO {
             }
 
         } catch (IOException e) {
-
         }
     }
 
@@ -118,10 +117,9 @@ public class CantanteDAO implements ICantanteDAO {
                             String nombreDisco = archivo.readUTF();
                             int anio = archivo.readInt();
                             cantante.agregarDisco(codigoDisco, nombreDisco, anio);
-                        } else{
+                        } else {
                             return cantante;
                         }
-                        
 
                     }
                     return cantante;
@@ -331,17 +329,18 @@ public class CantanteDAO implements ICantanteDAO {
                     for (int j = 0; j < 10; j++) {
                         archivo.seek(i + 149 + (j * 25));
                         if (archivo.readInt() == codigo) {
-                            archivo.seek(i + 149 + (j * 25));
-                            archivo.writeInt(codigo);
+
                             archivo.writeUTF(this.relleno(nombre, 15));
                             archivo.writeInt(anioDeLanzamiento);
                             return;
                         }
+
                     }
                 }
             }
 
         } catch (IOException e) {
+
         }
     }
 

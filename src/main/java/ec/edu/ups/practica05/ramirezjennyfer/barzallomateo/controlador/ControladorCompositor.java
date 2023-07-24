@@ -136,10 +136,9 @@ public class ControladorCompositor {
 
     public boolean actualizarCancion(Compositor compositor, int codigo, String titulo, String letra, double tiempoEnMinutos) {
         this.compositor = compositorDAO.read(compositor.getCodigo());
-        Cancion cancion = this.buscarCancion(compositor, codigo);
+        Cancion cancion = this.buscarCancion(this.compositor, codigo);
         if (cancion != null) {
             compositorDAO.updateCancion(this.compositor, codigo, titulo, letra, tiempoEnMinutos);
-            compositorDAO.update(this.compositor);
             return true;
         } else {
             return false;
