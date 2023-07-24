@@ -579,4 +579,157 @@ public class CompositorDAO implements ICompositorDAO {
         }
     }
 
+    @Override
+    public void createCliente(Compositor compositor, Cantante cantante) {
+        try {
+            archivo.seek(0);
+            if (compositor.getNumeroDeClientes() == 10) {
+                return;
+            }
+            for (int i = 0; i < this.tamañoArchivo(); i += 4892) {
+                archivo.seek(i);
+                if (archivo.readInt() == compositor.getCodigo()) {
+                    archivo.seek(i + 902 + (compositor.getNumeroDeClientes() * 399));
+                    archivo.writeInt(cantante.getCodigo());
+
+                    archivo.writeUTF(this.rellenoCadena(cantante.getNombre(), 25));
+                    archivo.writeUTF(this.rellenoCadena(cantante.getApellido(), 25));
+                    archivo.writeInt(cantante.getEdad());
+
+                    archivo.writeUTF(this.rellenoCadena(cantante.getNacionalidad(), 20));
+
+                    archivo.writeDouble(cantante.getSalario());
+
+                    archivo.writeUTF(this.rellenoCadena(cantante.getNombreArtistico(), 25));
+
+                    archivo.writeUTF(this.rellenoCadena(cantante.getGeneroMusical(), 20));
+
+                    archivo.writeInt(cantante.getNumeroDeConciertos());
+
+                    archivo.writeInt(cantante.getNumeroDeGiras());
+                    //149
+                    if (cantante.listarDiscos() != null) {
+                        for (Disco disco : cantante.listarDiscos()) {
+                            archivo.writeInt(disco.getCodigo());
+                            archivo.writeUTF(this.rellenoCadena(disco.getNombre(), 15));
+                            archivo.writeInt(disco.getAnioDeLanzamiento());
+                        }
+                    } else {
+                        for (int j = 0; j < 10; j++) {
+                            archivo.writeInt(0);
+                            archivo.writeUTF(this.rellenoCadena("", 15));
+                            archivo.writeInt(0);
+                        }
+                    }
+                }
+            }
+        } catch (IOException e) {
+
+        }
+    }
+
+    @Override
+    public Cantante readCliente(Compositor compositor, int codigo) {
+        try {
+            archivo.seek(0);
+
+            for (int i = 0; i < this.tamañoArchivo(); i += 4892) {
+                archivo.seek(i);
+                if (archivo.readInt() == compositor.getCodigo()) {
+                    for (int j = 0; j < 10; j++) {
+
+                        archivo.seek(i + 902 + (j * 399));
+                        if (archivo.readInt() == codigo) {
+                            archivo.seek(i + 902 + (j * 399));
+                            int cod = archivo.readInt();
+                            String nombre = archivo.readUTF();
+                            String apellido = archivo.readUTF();
+                            int edad = archivo.readInt();
+                            String nacionalidad = archivo.readUTF();
+                            double salario = archivo.readDouble();
+                            String nombreArtistico = archivo.readUTF();
+                            String genero = archivo.readUTF();
+                            int numConciertos = archivo.readInt();
+                            int numGiras = archivo.readInt();
+                            Cantante cantante = new Cantante(nombreArtistico, genero, numConciertos, numGiras, cod, nombre, apellido, edad, nacionalidad, salario);
+
+                            for (int k = 0; k < 10; k++) {
+
+                                int codigoDisco = archivo.readInt();
+                                if (codigoDisco != 0) {
+                                    String nombreDisco = archivo.readUTF();
+                                    int anio = archivo.readInt();
+                                    cantante.agregarDisco(codigoDisco, nombreDisco, anio);
+                                }
+
+                            }
+                            return cantante;
+                        }
+                    }
+
+                }
+            }
+            return null;
+        } catch (IOException e) {
+            return null;
+        }
+    }
+
+    @Override
+    public void updateCliente(Compositor compositor, Cantante anterior, Cantante nuevo) {
+        try {
+            archivo.seek(0);
+
+            for (int i = 0; i < this.tamañoArchivo(); i += 4892) {
+                archivo.seek(i);
+                if (archivo.readInt() == compositor.getCodigo()) {
+                    for (int j = 0; j < 10; j++) {
+
+                        archivo.seek(i + 902 + (j * 399));
+                        if (archivo.readInt() == codigo) {
+                            archivo.seek(i + 902 + (j * 399));
+                            int cod = archivo.readInt();
+                            String nombre = archivo.readUTF();
+                            String apellido = archivo.readUTF();
+                            int edad = archivo.readInt();
+                            String nacionalidad = archivo.readUTF();
+                            double salario = archivo.readDouble();
+                            String nombreArtistico = archivo.readUTF();
+                            String genero = archivo.readUTF();
+                            int numConciertos = archivo.readInt();
+                            int numGiras = archivo.readInt();
+                            Cantante cantante = new Cantante(nombreArtistico, genero, numConciertos, numGiras, cod, nombre, apellido, edad, nacionalidad, salario);
+
+                            for (int k = 0; k < 10; k++) {
+
+                                int codigoDisco = archivo.readInt();
+                                if (codigoDisco != 0) {
+                                    String nombreDisco = archivo.readUTF();
+                                    int anio = archivo.readInt();
+                                    cantante.agregarDisco(codigoDisco, nombreDisco, anio);
+                                }
+
+                            }
+                            return cantante;
+                        }
+                    }
+
+                }
+            }
+            return null;
+        } catch (IOException e) {
+            return null;
+        }
+    }
+
+    @Override
+    public void deleteCliente(Compositor compositor, Cantante cantante) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public List<Cantante> findAllClientes(Compositor compositor) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
 }
