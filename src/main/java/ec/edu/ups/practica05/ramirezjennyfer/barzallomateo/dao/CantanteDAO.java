@@ -118,9 +118,7 @@ public class CantanteDAO implements ICantanteDAO {
                             String nombreDisco = archivo.readUTF();
                             int anio = archivo.readInt();
                             cantante.agregarDisco(codigoDisco, nombreDisco, anio);
-                        } else {
-                            return cantante;
-                        }
+                        } 
 
                     }
                     return cantante;
@@ -280,8 +278,9 @@ public class CantanteDAO implements ICantanteDAO {
                 archivo.seek(i);
                 if (archivo.readInt() == cantante.getCodigo()) {
                     archivo.seek(i + 149 + (cantante.getNumeroDeSencillos() * 25));
+                    System.out.println(cantante.getNumeroDeSencillos());
                     archivo.writeInt(codigo);
-                    archivo.writeUTF(nombre);
+                    archivo.writeUTF(this.relleno(nombre, 15));
                     archivo.writeInt(anioDeLanzamiento);
                     break;
                 }
@@ -301,9 +300,9 @@ public class CantanteDAO implements ICantanteDAO {
                 archivo.seek(i);
                 if (archivo.readInt() == cantante.getCodigo()) {
                     for (int j = 0; j < 10; j++) {
-                        archivo.seek(i + 149 + (i * 25));
+                        archivo.seek(i + 149 + (j * 25));
                         if (archivo.readInt() == codigo) {
-                            archivo.seek(i + 149 + (i * 25));
+                            archivo.seek(i + 149 + (j * 25));
                             int codigon = archivo.readInt();
                             String nombre = archivo.readUTF();
                             int anio = archivo.readInt();
@@ -318,21 +317,84 @@ public class CantanteDAO implements ICantanteDAO {
             return null;
         }
     }
-    //
-    //    @Override
-    //    public void updateDisco(Cantante cantante, int codigo, String nombre, int anioDeLanzamiento) {
-    //        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    //    }
-    //
-    //    @Override
-    //    public void deleteDisco(Cantante cantante, int codigo, String nombre, int anioDeLanzamiento) {
-    //        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    //    }
-    //
-    //    @Override
-    //    public List<Disco> findAllDisco(Cantante cantante) {
-    //        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    //    }
+
+    @Override
+    public void updateDisco(Cantante cantante, int codigo, String nombre, int anioDeLanzamiento) {
+        try {
+            archivo.seek(0);
+
+            for (int i = 0; i < this.tamañoArchivo(); i += 399) {
+                archivo.seek(i);
+                if (archivo.readInt() == cantante.getCodigo()) {
+                    for (int j = 0; j < 10; j++) {
+                        archivo.seek(i + 149 + (j * 25));
+                        if (archivo.readInt() == codigo) {
+                            archivo.seek(i + 149 + (j * 25));
+                            archivo.writeInt(codigo);
+                            archivo.writeUTF(this.relleno(nombre, 15));
+                            archivo.writeInt(anioDeLanzamiento);
+                            return;
+                        }
+                    }
+                }
+            }
+
+        } catch (IOException e) {
+        }
+    }
+
+    @Override
+    public void deleteDisco(Cantante cantante, int codigo, String nombre, int anioDeLanzamiento) {
+        try {
+            archivo.seek(0);
+
+            for (int i = 0; i < this.tamañoArchivo(); i += 399) {
+                archivo.seek(i);
+                if (archivo.readInt() == cantante.getCodigo()) {
+                    for (int j = 0; j < 10; j++) {
+                        archivo.seek(i + 149 + (j * 25));
+                        if (archivo.readInt() == codigo) {
+                            archivo.seek(i + 149 + (j * 25));
+                            archivo.writeInt(0);
+                            archivo.writeUTF(this.relleno("", 15));
+                            archivo.writeInt(0);
+                            return;
+                        }
+                    }
+                }
+            }
+
+        } catch (IOException e) {
+        }
+    }
+
+    @Override
+    public List<Disco> findAllDisco(Cantante cantante) {
+        try {
+            List<Disco> lista = new ArrayList<>();
+            archivo.seek(0);
+            for (int i = 0; i < this.tamañoArchivo(); i += 399) {
+                archivo.seek(i);
+                if (archivo.readInt() == cantante.getCodigo()) {
+                    for (int j = 0; j < 10; j++) {
+                        archivo.seek(i + 149 + (j * 25));
+                        int codigo = archivo.readInt();
+                        if (codigo != 0) {
+                            String nombre = archivo.readUTF();
+                            int anio = archivo.readInt();
+                            lista.add(new Disco(codigo, nombre, anio));
+                        }
+                    }
+                }
+            }
+            return lista;
+
+        } catch (IOException e) {
+            return null;
+        }
+
+    }
+
     private List<Cantante> listaCantantes;
 
     @Override
@@ -353,21 +415,6 @@ public class CantanteDAO implements ICantanteDAO {
         }
         return null;
 
-    }
-
-    @Override
-    public void updateDisco(Cantante cantante, int codigo, String nombre, int anioDeLanzamiento) {
-        cantante.actualizarDisco(codigo, nombre, anioDeLanzamiento);
-    }
-
-    @Override
-    public void deleteDisco(Cantante cantante, int codigo, String nombre, int anioDeLanzamiento) {
-        cantante.eliminarDisco(codigo, nombre, anioDeLanzamiento);
-    }
-
-    @Override
-    public List<Disco> findAllDisco(Cantante cantante) {
-        return cantante.listarDiscos();
     }
 
 }

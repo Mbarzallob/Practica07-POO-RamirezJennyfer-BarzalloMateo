@@ -74,7 +74,7 @@ public class ControladorCantante {
     }
 
     public void ingresarDisco(Cantante cantante, int codigo, String nombre, int anioDeLanzamiento) {
-        this.cantante = cantante;
+        this.cantante = cantanteDAO.read(cantante.getCodigo());
 
         cantanteDAO.createDisco(this.cantante, codigo, nombre, anioDeLanzamiento);
         cantanteDAO.update(this.cantante);

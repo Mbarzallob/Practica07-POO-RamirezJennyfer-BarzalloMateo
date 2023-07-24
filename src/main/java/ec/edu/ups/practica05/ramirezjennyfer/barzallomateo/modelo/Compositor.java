@@ -25,9 +25,8 @@ public class Compositor extends Persona {
     }
 
     // Constructor donde se encuentran los datos de la clase Compositor más los atributos de la clase padre Persona
-    public Compositor(int numeroDeComposiciones, int codigo, String nombre, String apellido, int edad, String nacionalidad, double salario) {
+    public Compositor( int codigo, String nombre, String apellido, int edad, String nacionalidad, double salario) {
         super(codigo, nombre, apellido, edad, nacionalidad, salario);
-        this.numeroDeComposiciones = numeroDeComposiciones;
         cancionesTop100Bilboard = new ArrayList<>();
         clientes = new ArrayList<>();
     }
@@ -35,12 +34,14 @@ public class Compositor extends Persona {
     // Getter y setter: Encapsulamiento de los atributos
     // Getter y setter del Atributo numero
     public int getNumeroDeComposiciones() {
-        return numeroDeComposiciones;
+        return cancionesTop100Bilboard.size();
+    }
+    
+    public int getNumeroDeClientes(){
+        return clientes.size();
     }
 
-    public void setNumeroDeComposiciones(int numeroDeComposiciones) {
-        this.numeroDeComposiciones = numeroDeComposiciones;
-    }
+   
 
     // Metodo hashCode: Metodo que compara los objetos pasados devolviendo un numero entero 
     @Override

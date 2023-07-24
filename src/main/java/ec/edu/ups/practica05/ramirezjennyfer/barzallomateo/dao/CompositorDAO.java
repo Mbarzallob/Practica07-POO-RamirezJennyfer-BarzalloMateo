@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package ec.edu.ups.practica05.ramirezjennyfer.barzallomateo.dao;
+
 import ec.edu.ups.practica05.ramirezjennyfer.barzallomateo.idao.ICompositorDAO;
 import ec.edu.ups.practica05.ramirezjennyfer.barzallomateo.modelo.Cancion;
 import ec.edu.ups.practica05.ramirezjennyfer.barzallomateo.modelo.Compositor;
@@ -10,7 +11,6 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -19,14 +19,14 @@ import java.util.List;
  */
 public class CompositorDAO implements ICompositorDAO {
 
-    RandomAccessFile archivoo;
+    RandomAccessFile archivo;
     List<Compositor> listaCompositores;
 
     public CompositorDAO() {
-        archivoo = instanciaRAF();
+        archivo = instanciaRAF();
         listaCompositores = new ArrayList<>();
     }
-    
+
     private RandomAccessFile instanciaRAF() {
         try {
             return new RandomAccessFile("src/main/resources/archivos/compositor.data", "rw");
@@ -34,7 +34,7 @@ public class CompositorDAO implements ICompositorDAO {
             return null;
         }
     }
-    
+
     private String rellenoCadena(String val, int valI) {
         if (val.length() != valI) {
             if (val.length() < valI) {
@@ -46,48 +46,108 @@ public class CompositorDAO implements ICompositorDAO {
             return val;
         }
     }
-    
+
     private long tamañoArchivo() {
         try {
-            return this.archivoo.length();
+            return this.archivo.length();
         } catch (IOException e) {
             return 0;
         }
     }
-    
+
     @Override
     public void create(Compositor compositor) {
         try {
             /*
             Esta línea utiliza el método seek del objeto archivo para posicionar el puntero de 
             lectura/escritura al final del archivo, listo para añadir nuevos datos
-            */
-            archivoo.seek(this.tamañoArchivo());
-            
-            archivoo.writeInt(compositor.getCodigo());
+             */
+            archivo.seek(this.tamañoArchivo());
 
-            archivoo.writeUTF(this.rellenoCadena(compositor.getNombre(), 25));
-            
-            archivoo.writeUTF(this.rellenoCadena(compositor.getApellido(), 25));
-            
-            archivoo.writeInt(compositor.getEdad());
+            archivo.writeInt(compositor.getCodigo());
 
-            archivoo.writeUTF(this.rellenoCadena(compositor.getNacionalidad(), 20));
+            archivo.writeUTF(this.rellenoCadena(compositor.getNombre(), 25));
 
-            archivoo.writeDouble(compositor.getSalario());
-            
-            archivoo.writeInt(compositor.getNumeroDeComposiciones());
-            //100
+            archivo.writeUTF(this.rellenoCadena(compositor.getApellido(), 25));
+
+            archivo.writeInt(compositor.getEdad());
+
+            archivo.writeUTF(this.rellenoCadena(compositor.getNacionalidad(), 20));
+
+            archivo.writeDouble(compositor.getSalario());
+
+            //92
             for (int i = 0; i < 10; i++) {
-                archivoo.writeInt(0);
-                archivoo.writeUTF(this.rellenoCadena("", 15));
-                archivoo.writeInt(0);
+                archivo.writeInt(0);
+                archivo.writeUTF(this.rellenoCadena("", 15));
+                archivo.writeUTF(this.rellenoCadena("", 50));
+                archivo.writeDouble(0);
             }
-        } catch(IOException e) {
-            
+
+            for (int i = 0; i < 10; i++) {
+                archivo.seek(this.tamañoArchivo());
+                archivo.writeInt(0);
+
+                archivo.writeUTF(this.rellenoCadena("", 25));
+                archivo.writeUTF(this.rellenoCadena("", 25));
+                archivo.writeInt(0);
+
+                archivo.writeUTF(this.rellenoCadena("", 20));
+
+                archivo.writeDouble(0);
+
+                archivo.writeUTF(this.rellenoCadena("", 25));
+
+                archivo.writeUTF(this.rellenoCadena("", 20));
+
+                archivo.writeInt(0);
+
+                archivo.writeInt(0);
+
+                for (int j = 0; j < 10; j++) {
+                    archivo.writeInt(0);
+                    archivo.writeUTF(this.rellenoCadena("", 15));
+                    archivo.writeInt(0);
+                }
+            }
+        } catch (IOException e) {
+
         }
-    
-        
+    }
+
+    @Override
+    public Compositor read(int codigo) {
+        try {
+            archivo.seek(0);
+            for (int i = 0; i < this.tamañoArchivo(); i += 4892) {
+                archivo.seek(i);
+                if (archivo.readInt() == codigo) {
+                    archivo.seek(i);
+                    int cod = archivo.readInt();
+                    String nombre = archivo.readUTF();
+                    String apellido = archivo.readUTF();
+                    int edad = archivo.readInt();
+                    String nacionalidad = archivo.readUTF();
+                    double salario = archivo.readDouble();
+                    Compositor compositor = new Compositor(cod, nombre, apellido, edad, nacionalidad, salario);
+                    for (int j = 0; j < 10; j++) {
+                        int codigoCancion = archivo.readInt();
+                        if (codigoCancion != 0) {
+                            String titulo = archivo.readUTF();
+                            String letra = archivo.readUTF();
+                            double duracion = archivo.readDouble();
+                            compositor.agregarCancion(codigoCancion, titulo, letra, duracion);
+                        }
+
+                    }
+                    
+                }
+            }
+        } catch (IOException e) {
+
+        }
+    }
+
     /*
     @Override
     public Compositor read(int codigo) {
@@ -126,10 +186,8 @@ public class CompositorDAO implements ICompositorDAO {
         }
         return null;
     }
-    */
-    
-        
-    /*   
+     */
+ /*   
     @Override
     public void create(Compositor compositor) {
         listaCompositores.add(compositor);
@@ -170,34 +228,32 @@ public class CompositorDAO implements ICompositorDAO {
             }
         }
     }
-*/
+     */
     @Override
     public List<Compositor> findAll() {
         return listaCompositores;
     }
-
 
     @Override
     public Compositor buscarPorCancion(String valor) {
         //Se recorre la lista de personas con el forEach
         for (Compositor compositor : listaCompositores) {
             //Se pregunta si la persona es de tipo Compositor
-       
-                //se recorre la lista de cancionesTop100Bilboard
-                for (Cancion cancion : compositor.listarCanciones()) {
-                    //Se pregunta si el titulo es igual al que se ingreso como parametro
-                    if (cancion.getTitulo().equals(valor)) {
-                        //Se retorna el compositor y se imprime el nombre y el apellido del compositor
-                        System.out.println(compositor.getNombre() + " " + compositor.getApellido());
-                        return compositor;
-                    }
-                
+
+            //se recorre la lista de cancionesTop100Bilboard
+            for (Cancion cancion : compositor.listarCanciones()) {
+                //Se pregunta si el titulo es igual al que se ingreso como parametro
+                if (cancion.getTitulo().equals(valor)) {
+                    //Se retorna el compositor y se imprime el nombre y el apellido del compositor
+                    System.out.println(compositor.getNombre() + " " + compositor.getApellido());
+                    return compositor;
+                }
+
             }
         }
         return null;
     }
-    
-    
+
     @Override
     public void createCancion(Compositor compositor, int codigo, String titulo, String letra, double tiempoEnMinutos) {
         compositor.agregarCancion(codigo, titulo, letra, tiempoEnMinutos);
@@ -215,11 +271,21 @@ public class CompositorDAO implements ICompositorDAO {
 
     @Override
     public void deleteCancion(Compositor compositor, int codigo, String titulo, String letra, double tiempoEnMinutos) {
-       compositor.eliminarCancion(codigo, titulo, letra, tiempoEnMinutos);
+        compositor.eliminarCancion(codigo, titulo, letra, tiempoEnMinutos);
     }
 
     @Override
     public List<Cancion> findAllCanciones(Compositor compositor) {
         return compositor.listarCanciones();
+    }
+
+    @Override
+    public void update(Compositor compositor) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public void delete(Compositor compositor) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }

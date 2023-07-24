@@ -52,7 +52,6 @@ public class ControladorCompositor {
             compositorEncontrado.setApellido(compositor.getApellido());
             compositorEncontrado.setEdad(compositor.getEdad());
             compositorEncontrado.setNacionalidad(compositor.getNacionalidad());
-            compositorEncontrado.setNumeroDeComposiciones(compositor.getNumeroDeComposiciones());
             compositorEncontrado.setSalario(compositor.getSalario());
             compositorDAO.update(compositorEncontrado);
             return true;
