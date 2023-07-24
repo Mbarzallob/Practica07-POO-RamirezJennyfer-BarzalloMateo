@@ -6,6 +6,8 @@ package ec.edu.ups.practica05.ramirezjennyfer.barzallomateo.dao;
 
 import ec.edu.ups.practica05.ramirezjennyfer.barzallomateo.controlador.ControladorCantante;
 import ec.edu.ups.practica05.ramirezjennyfer.barzallomateo.modelo.Cantante;
+import ec.edu.ups.practica05.ramirezjennyfer.barzallomateo.modelo.Disco;
+import java.util.List;
 
 /**
  *
@@ -19,21 +21,20 @@ public class pruebas {
     public static void main(String[] args) {
         CantanteDAO cc = new CantanteDAO();
         ControladorCantante c = new ControladorCantante(cc);
-        Cantante cantante = new Cantante("verga", "s", 1, 2, 2, "federico proaño", "no se pana", 19, "ec", 2);
+        Cantante cantante = new Cantante("verga", "s", 5, 3, 1, "mateo", "barzallo", 19, "ec", 250);
+//        c.ingresarDisco(cantante, 0, "un verano si", 0);
+        System.out.println(c.buscarDisco(cantante, 0).getNombre());
+        System.out.println(c.buscarDisco(cantante, 0).getAnioDeLanzamiento());
 //        c.agregarCantante(cantante);
-    c.actualizarCantante(cantante);
-        System.out.println(c.buscarCantante(2).getCodigo());
-        System.out.println(c.buscarCantante(2).getNombre());
-        System.out.println(c.buscarCantante(2).getApellido());
-        System.out.println(c.buscarCantante(2).getEdad());
-        System.out.println(c.buscarCantante(2).getNacionalidad());
-        System.out.println(c.buscarCantante(2).getSalario());
-        System.out.println(c.buscarCantante(2).getNombreArtistico());
-        System.out.println(c.buscarCantante(2).getGeneroMusical());
-        System.out.println(c.buscarCantante(2).getNumeroDeConciertos());
-        System.out.println(c.buscarCantante(2).getNumeroDeGiras());
-        System.out.println(c.buscarCantante(2).getNumeroDeSencillos());
+//        c.agregarCantante(cantante);
+//        c.agregarCantante(cantante);
+//        c.eliminarCantante(cantante);
+//        List<Cantante> lista = c.listar();
+//        for (Cantante cantante1 : lista) {
+//            System.out.println(cantante.getNombre());
+////        }
+//        
 
     }
-
+    
 }
