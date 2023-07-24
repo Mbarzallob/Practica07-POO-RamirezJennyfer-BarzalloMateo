@@ -17,7 +17,7 @@ import java.util.List;
 public class ControladorCantante {
 
     private Cantante cantante;
-    
+
     private ICantanteDAO cantanteDAO;
 
     public ControladorCantante(CantanteDAO cantanteDAO) {
@@ -81,12 +81,12 @@ public class ControladorCantante {
     }
 
     public Disco buscarDisco(Cantante cantante, int codigo) {
-        this.cantante = cantante;
+        this.cantante = cantanteDAO.read(cantante.getCodigo());
         return cantanteDAO.readDisco(this.cantante, codigo);
     }
 
     public boolean eliminarDisco(Cantante cantante, int codigo, String nombre, int anioDeLanzamiento) {
-        this.cantante = cantante;
+        this.cantante = cantanteDAO.read(cantante.getCodigo());
         Disco disco = this.buscarDisco(this.cantante, codigo);
         if (disco != null) {
             cantanteDAO.deleteDisco(this.cantante, codigo, nombre, anioDeLanzamiento);
@@ -98,7 +98,7 @@ public class ControladorCantante {
     }
 
     public boolean actualizarDisco(Cantante cantante, int codigo, String nombre, int anioDeLanzamiento) {
-        this.cantante = cantante;
+        this.cantante = cantanteDAO.read(cantante.getCodigo());
         Disco disco = this.buscarDisco(cantante, codigo);
         if (disco != null) {
             cantanteDAO.updateDisco(this.cantante, codigo, nombre, anioDeLanzamiento);
@@ -110,7 +110,7 @@ public class ControladorCantante {
     }
 
     public List<Disco> listarDiscos(Cantante cantante) {
-        this.cantante = cantante;
+        this.cantante = cantanteDAO.read(cantante.getCodigo());
         return cantanteDAO.findAllDisco(this.cantante);
     }
 }
