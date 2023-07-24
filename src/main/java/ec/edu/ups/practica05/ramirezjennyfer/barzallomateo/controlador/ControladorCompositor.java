@@ -110,7 +110,7 @@ public class ControladorCompositor {
 
     //metodos para canciones
     public void agregarCancion(Compositor compositor, int codigo, String titulo, String letra, double tiempoEnMinutos) {
-        this.compositor = compositor;
+        this.compositor = compositorDAO.read(compositor.getCodigo());
         compositorDAO.createCancion(this.compositor, codigo, titulo, letra, tiempoEnMinutos);
         compositorDAO.update(this.compositor);
     }

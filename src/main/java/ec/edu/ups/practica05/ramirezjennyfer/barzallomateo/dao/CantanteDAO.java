@@ -278,7 +278,6 @@ public class CantanteDAO implements ICantanteDAO {
                 archivo.seek(i);
                 if (archivo.readInt() == cantante.getCodigo()) {
                     archivo.seek(i + 149 + (cantante.getNumeroDeSencillos() * 25));
-                    System.out.println(cantante.getNumeroDeSencillos());
                     archivo.writeInt(codigo);
                     archivo.writeUTF(this.relleno(nombre, 15));
                     archivo.writeInt(anioDeLanzamiento);

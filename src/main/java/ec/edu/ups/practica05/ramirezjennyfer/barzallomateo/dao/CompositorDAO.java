@@ -6,7 +6,9 @@ package ec.edu.ups.practica05.ramirezjennyfer.barzallomateo.dao;
 
 import ec.edu.ups.practica05.ramirezjennyfer.barzallomateo.idao.ICompositorDAO;
 import ec.edu.ups.practica05.ramirezjennyfer.barzallomateo.modelo.Cancion;
+import ec.edu.ups.practica05.ramirezjennyfer.barzallomateo.modelo.Cantante;
 import ec.edu.ups.practica05.ramirezjennyfer.barzallomateo.modelo.Compositor;
+import ec.edu.ups.practica05.ramirezjennyfer.barzallomateo.modelo.Disco;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.RandomAccessFile;
@@ -140,42 +142,34 @@ public class CompositorDAO implements ICompositorDAO {
                         }
 
                     }
-                    
-                }
-            }
-        } catch (IOException e) {
-
-        }
-    }
-
-    /*
-    @Override
-    public Compositor read(int codigo) {
-        try {
-            archivoo.seek(0);
-        for (int i = 0; i < this.tamañoArchivo(); i += 399) {
-                archivoo.seek(i);
-                if (archivoo.readInt() == codigo) {
-                    archivoo.seek(i);
-                    int cod = archivoo.readInt();
-                    String nombree = archivoo.readUTF();
-                    String apellidoo = archivoo.readUTF();
-                    int edadd = archivoo.readInt();
-                    String nacionalidadd = archivoo.readUTF();
-                    double salarioo = archivoo.readDouble();
-                    int numeroDeComposicioness = archivoo.readInt();
-                    Compositor compositor = new Compositor(numeroDeComposicioness, cod, nombree, apellidoo, edadd, nacionalidadd, salarioo);
-                    
                     for (int j = 0; j < 10; j++) {
-                        int codigoDisco = archivoo.readInt();
-                        if (codigoDisco != 0) {
-                            String nombreDisco = archivoo.readUTF();
-                            int anio = archivoo.readInt();
-                            compositor.agregarDisco(codigoDisco, nombreDisco, anio);
-                        } else {
-                            return compositor;
-                        }
+                        int codCantante = archivo.readInt();
+                        if (codCantante != 0) {
+                            String nombreCantante = archivo.readUTF();
+                            String apellidoCantante = archivo.readUTF();
+                            int edadCantante = archivo.readInt();
+                            String nacionalidadCantante = archivo.readUTF();
+                            double salarioCantante = archivo.readDouble();
+                            String nombreArtistico = archivo.readUTF();
+                            String genero = archivo.readUTF();
+                            int numConciertos = archivo.readInt();
+                            int numGiras = archivo.readInt();
+                            Cantante cantante = new Cantante(nombreArtistico, genero, numConciertos, numGiras, codCantante, nombreCantante, apellidoCantante, edadCantante, nacionalidadCantante, salarioCantante);
 
+                            for (int k = 0; k < 10; k++) {
+
+                                int codigoDisco = archivo.readInt();
+                                if (codigoDisco != 0) {
+                                    String nombreDisco = archivo.readUTF();
+                                    int anio = archivo.readInt();
+                                    cantante.agregarDisco(codigoDisco, nombreDisco, anio);
+                                } else {
+                                    break;
+                                }
+
+                            }
+                            compositor.agregarCliente(cantante);
+                        }
                     }
                     return compositor;
                 }
@@ -186,54 +180,250 @@ public class CompositorDAO implements ICompositorDAO {
         }
         return null;
     }
-     */
- /*   
-    @Override
-    public void create(Compositor compositor) {
-        listaCompositores.add(compositor);
-    }
-
-    @Override
-    public Compositor read(int codigo) {
-
-        for (Compositor compositor : listaCompositores) {
-            if (compositor.getCodigo() == codigo) {
-                return compositor;
-            }
-        }
-        return null;
-    }
 
     @Override
     public void update(Compositor compositor) {
+        try {
+            /*
+            Esta línea utiliza el método seek del objeto archivo para posicionar el puntero de 
+            lectura/escritura al final del archivo, listo para añadir nuevos datos
+             */
+            archivo.seek(0);
+            for (int a = 0; a < this.tamañoArchivo(); a += 4982) {
+                archivo.seek(a);
+                if (archivo.readInt() == compositor.getCodigo()) {
+                    archivo.seek(a);
+                    archivo.writeInt(compositor.getCodigo());
 
-        for (int i = 0; i < listaCompositores.size(); i++) {
-            Compositor c = listaCompositores.get(i);
-            if (c.getCodigo() == compositor.getCodigo()) {
-                listaCompositores.set(i, compositor);
-                break;
+                    archivo.writeUTF(this.rellenoCadena(compositor.getNombre(), 25));
+
+                    archivo.writeUTF(this.rellenoCadena(compositor.getApellido(), 25));
+
+                    archivo.writeInt(compositor.getEdad());
+
+                    archivo.writeUTF(this.rellenoCadena(compositor.getNacionalidad(), 20));
+
+                    archivo.writeDouble(compositor.getSalario());
+
+                    //92
+                    if (compositor.listarCanciones() != null) {
+                        for (Cancion cancion : compositor.listarCanciones()) {
+                            archivo.writeInt(cancion.getCodigo());
+                            archivo.writeUTF(this.rellenoCadena(cancion.getTitulo(), 15));
+                            archivo.writeUTF(this.rellenoCadena(cancion.getLetra(), 50));
+                            archivo.writeDouble(cancion.getTiempoEnMinutos());
+                        }
+                    } else {
+                        for (int i = 0; i < 10; i++) {
+                            archivo.writeInt(0);
+                            archivo.writeUTF(this.rellenoCadena("", 15));
+                            archivo.writeUTF(this.rellenoCadena("", 50));
+                            archivo.writeDouble(0);
+                        }
+                    }
+                    if (compositor.listarCantantes() != null) {
+                        for (Cantante cantante : compositor.listarCantantes()) {
+                            archivo.writeInt(cantante.getCodigo());
+
+                            archivo.writeUTF(this.rellenoCadena(cantante.getNombre(), 25));
+                            archivo.writeUTF(this.rellenoCadena(cantante.getApellido(), 25));
+                            archivo.writeInt(cantante.getEdad());
+
+                            archivo.writeUTF(this.rellenoCadena(cantante.getNacionalidad(), 20));
+
+                            archivo.writeDouble(cantante.getSalario());
+
+                            archivo.writeUTF(this.rellenoCadena(cantante.getNombreArtistico(), 25));
+
+                            archivo.writeUTF(this.rellenoCadena(cantante.getGeneroMusical(), 20));
+
+                            archivo.writeInt(cantante.getNumeroDeConciertos());
+
+                            archivo.writeInt(cantante.getNumeroDeGiras());
+                            if (cantante.listarDiscos() != null) {
+                                for (Disco disco : cantante.listarDiscos()) {
+                                    archivo.writeInt(disco.getCodigo());
+                                    archivo.writeUTF(this.rellenoCadena(disco.getNombre(), 15));
+                                    archivo.writeInt(disco.getAnioDeLanzamiento());
+                                }
+                            } else {
+                                for (int j = 0; j < 10; j++) {
+                                    archivo.writeInt(0);
+                                    archivo.writeUTF(this.rellenoCadena("", 15));
+                                    archivo.writeInt(0);
+                                }
+                            }
+                        }
+                    } else {
+                        for (int i = 0; i < 10; i++) {
+                            archivo.writeInt(0);
+
+                            archivo.writeUTF(this.rellenoCadena("", 25));
+                            archivo.writeUTF(this.rellenoCadena("", 25));
+                            archivo.writeInt(0);
+
+                            archivo.writeUTF(this.rellenoCadena("", 20));
+
+                            archivo.writeDouble(0);
+
+                            archivo.writeUTF(this.rellenoCadena("", 25));
+
+                            archivo.writeUTF(this.rellenoCadena("", 20));
+
+                            archivo.writeInt(0);
+
+                            archivo.writeInt(0);
+
+                            for (int j = 0; j < 10; j++) {
+                                archivo.writeInt(0);
+                                archivo.writeUTF(this.rellenoCadena("", 15));
+                                archivo.writeInt(0);
+                            }
+                        }
+                    }
+                }
             }
+        } catch (IOException e) {
+
         }
     }
 
     @Override
     public void delete(Compositor compositor) {
+        try {
+            /*
+            Esta línea utiliza el método seek del objeto archivo para posicionar el puntero de 
+            lectura/escritura al final del archivo, listo para añadir nuevos datos
+             */
+            archivo.seek(0);
+            for (int a = 0; a < this.tamañoArchivo(); a += 4982) {
+                archivo.seek(a);
+                if (archivo.readInt() == compositor.getCodigo()) {
+                    archivo.seek(a);
+                    archivo.writeInt(0);
 
-        Iterator<Compositor> it = listaCompositores.iterator();
-        while (it.hasNext()) {
-            Compositor c = it.next();
-            if (c.getCodigo() == compositor.getCodigo()) {
-                it.remove();
-                break;
+                    archivo.writeUTF(this.rellenoCadena("", 25));
+
+                    archivo.writeUTF(this.rellenoCadena("", 25));
+
+                    archivo.writeInt(0);
+
+                    archivo.writeUTF(this.rellenoCadena("", 20));
+
+                    archivo.writeDouble(0);
+
+                    //92
+                    for (int i = 0; i < 10; i++) {
+                        archivo.writeInt(0);
+                        archivo.writeUTF(this.rellenoCadena("", 15));
+                        archivo.writeUTF(this.rellenoCadena("", 50));
+                        archivo.writeDouble(0);
+
+                    }
+
+                    for (int i = 0; i < 10; i++) {
+                        archivo.writeInt(0);
+
+                        archivo.writeUTF(this.rellenoCadena("", 25));
+                        archivo.writeUTF(this.rellenoCadena("", 25));
+                        archivo.writeInt(0);
+
+                        archivo.writeUTF(this.rellenoCadena("", 20));
+
+                        archivo.writeDouble(0);
+
+                        archivo.writeUTF(this.rellenoCadena("", 25));
+
+                        archivo.writeUTF(this.rellenoCadena("", 20));
+
+                        archivo.writeInt(0);
+
+                        archivo.writeInt(0);
+
+                        for (int j = 0; j < 10; j++) {
+                            archivo.writeInt(0);
+                            archivo.writeUTF(this.rellenoCadena("", 15));
+                            archivo.writeInt(0);
+                        }
+
+                    }
+                }
             }
+        } catch (IOException e) {
+
         }
     }
-     */
+
     @Override
     public List<Compositor> findAll() {
-        return listaCompositores;
+        try {
+            List<Compositor> lista = new ArrayList<>();
+            archivo.seek(0);
+            for (int i = 0; i < this.tamañoArchivo(); i += 4892) {
+                archivo.seek(i);
+                archivo.seek(i);
+                int cod = archivo.readInt();
+                String nombre = archivo.readUTF();
+                String apellido = archivo.readUTF();
+                int edad = archivo.readInt();
+                String nacionalidad = archivo.readUTF();
+                double salario = archivo.readDouble();
+                Compositor compositor = new Compositor(cod, nombre, apellido, edad, nacionalidad, salario);
+                for (int j = 0; j < 10; j++) {
+                    int codigoCancion = archivo.readInt();
+                    if (codigoCancion != 0) {
+                        String titulo = archivo.readUTF();
+                        String letra = archivo.readUTF();
+                        double duracion = archivo.readDouble();
+                        compositor.agregarCancion(codigoCancion, titulo, letra, duracion);
+                    }
+
+                }
+                for (int j = 0; j < 10; j++) {
+                    int codCantante = archivo.readInt();
+                    if (codCantante != 0) {
+                        String nombreCantante = archivo.readUTF();
+                        String apellidoCantante = archivo.readUTF();
+                        int edadCantante = archivo.readInt();
+                        String nacionalidadCantante = archivo.readUTF();
+                        double salarioCantante = archivo.readDouble();
+                        String nombreArtistico = archivo.readUTF();
+                        String genero = archivo.readUTF();
+                        int numConciertos = archivo.readInt();
+                        int numGiras = archivo.readInt();
+                        Cantante cantante = new Cantante(nombreArtistico, genero, numConciertos, numGiras, codCantante, nombreCantante, apellidoCantante, edadCantante, nacionalidadCantante, salarioCantante);
+
+                        for (int k = 0; k < 10; k++) {
+
+                            int codigoDisco = archivo.readInt();
+                            if (codigoDisco != 0) {
+                                String nombreDisco = archivo.readUTF();
+                                int anio = archivo.readInt();
+                                cantante.agregarDisco(codigoDisco, nombreDisco, anio);
+                            } else {
+                                break;
+                            }
+
+                        }
+                        compositor.agregarCliente(cantante);
+                    }
+                }
+                lista.add(compositor);
+
+            }
+            return lista;
+        } catch (IOException e) {
+            return null;
+        }
+
     }
 
+    //
+    //
+    //
+    //
+    //
+    //
     @Override
     public Compositor buscarPorCancion(String valor) {
         //Se recorre la lista de personas con el forEach
@@ -256,36 +446,137 @@ public class CompositorDAO implements ICompositorDAO {
 
     @Override
     public void createCancion(Compositor compositor, int codigo, String titulo, String letra, double tiempoEnMinutos) {
-        compositor.agregarCancion(codigo, titulo, letra, tiempoEnMinutos);
+        try {
+            archivo.seek(0);
+            if (compositor.getNumeroDeComposiciones() == 10) {
+                return;
+            }
+            for (int i = 0; i < this.tamañoArchivo(); i += 4892) {
+                archivo.seek(i);
+                if (archivo.readInt() == compositor.getCodigo()) {
+                    archivo.seek(i + 92 + (compositor.getNumeroDeComposiciones() * 81));
+                    archivo.writeInt(codigo);
+                    archivo.writeUTF(this.rellenoCadena(titulo, 15));
+                    archivo.writeUTF(this.rellenoCadena(letra, 50));
+                    archivo.writeDouble(tiempoEnMinutos);
+                }
+            }
+        } catch (IOException e) {
+
+        }
     }
 
     @Override
     public Cancion readCancion(Compositor compositor, int codigo) {
-        return compositor.buscarCancion(codigo);
+        try {
+            archivo.seek(0);
+
+            for (int i = 0; i < this.tamañoArchivo(); i += 4892) {
+                archivo.seek(i);
+                if (archivo.readInt() == compositor.getCodigo()) {
+                    for (int j = 0; j < 10; j++) {
+
+                        archivo.seek(i + 92 + (j * 81));
+                        if (archivo.readInt() == codigo) {
+                            archivo.seek(i + 92 + (j * 81));
+                            int codigoC = archivo.readInt();
+                            String titulo = archivo.readUTF();
+                            String letra = archivo.readUTF();
+                            double duracion = archivo.readDouble();
+                            return new Cancion(codigoC, titulo, letra, duracion);
+                        }
+                    }
+                }
+            }
+            return null;
+        } catch (IOException e) {
+            return null;
+        }
     }
 
     @Override
     public void updateCancion(Compositor compositor, int codigo, String titulo, String letra, double tiempoEnMinutos) {
-        compositor.actualizarCancion(codigo, titulo, letra, tiempoEnMinutos);
+        try {
+            archivo.seek(0);
+
+            for (int i = 0; i < this.tamañoArchivo(); i += 4892) {
+                archivo.seek(i);
+                if (archivo.readInt() == compositor.getCodigo()) {
+                    for (int j = 0; j < 10; j++) {
+
+                        archivo.seek(i + 92 + (j * 81));
+                        if (archivo.readInt() == codigo) {
+                            archivo.seek(i + 92 + (j * 81));
+                            archivo.writeInt(codigo);
+                            archivo.writeUTF(this.rellenoCadena(titulo, 15));
+                            archivo.writeUTF(this.rellenoCadena(letra, 50));
+                            archivo.writeDouble(tiempoEnMinutos);
+                            return;
+                        }
+                    }
+                }
+            }
+
+        } catch (IOException e) {
+
+        }
     }
 
     @Override
     public void deleteCancion(Compositor compositor, int codigo, String titulo, String letra, double tiempoEnMinutos) {
-        compositor.eliminarCancion(codigo, titulo, letra, tiempoEnMinutos);
+        try {
+            archivo.seek(0);
+
+            for (int i = 0; i < this.tamañoArchivo(); i += 4892) {
+                archivo.seek(i);
+                if (archivo.readInt() == compositor.getCodigo()) {
+                    for (int j = 0; j < 10; j++) {
+
+                        archivo.seek(i + 92 + (j * 81));
+                        if (archivo.readInt() == codigo) {
+                            archivo.seek(i + 92 + (j * 81));
+                            archivo.writeInt(0);
+                            archivo.writeUTF(this.rellenoCadena("", 15));
+                            archivo.writeUTF(this.rellenoCadena("", 50));
+                            archivo.writeDouble(0);
+                            return;
+                        }
+                    }
+                }
+            }
+
+        } catch (IOException e) {
+
+        }
     }
 
     @Override
     public List<Cancion> findAllCanciones(Compositor compositor) {
-        return compositor.listarCanciones();
+        try {
+            List<Cancion> lista = new ArrayList<>();
+            archivo.seek(0);
+
+            for (int i = 0; i < this.tamañoArchivo(); i += 4892) {
+                archivo.seek(i);
+                if (archivo.readInt() == compositor.getCodigo()) {
+                    for (int j = 0; j < 10; j++) {
+
+                        archivo.seek(i + 92 + (j * 81));
+                        int codigoC = archivo.readInt();
+                        if (codigoC != 0) {
+                            String titulo = archivo.readUTF();
+                            String letra = archivo.readUTF();
+                            double duracion = archivo.readDouble();
+                            lista.add(new Cancion(codigoC, titulo, letra, duracion));
+                        }
+                    }
+                }
+            }
+            return lista;
+
+        } catch (IOException e) {
+            return null;
+        }
     }
 
-    @Override
-    public void update(Compositor compositor) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    @Override
-    public void delete(Compositor compositor) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
 }
