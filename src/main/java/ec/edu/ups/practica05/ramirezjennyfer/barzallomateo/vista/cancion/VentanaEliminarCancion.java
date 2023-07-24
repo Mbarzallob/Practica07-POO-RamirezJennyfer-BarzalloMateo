@@ -104,20 +104,25 @@ public class VentanaEliminarCancion extends javax.swing.JInternalFrame {
         jLabel8.setText("Número de composiciones:");
 
         txtCodigo.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
+        txtCodigo.setToolTipText("Ingrese el codigo del Compositor EJM (0101)");
 
         txtNombre.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
+        txtNombre.setToolTipText("Datos del Compositor");
         txtNombre.setEnabled(false);
 
         txtApellido.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
+        txtApellido.setToolTipText("Datos del Compositor");
         txtApellido.setEnabled(false);
 
         txtNumComposiciones.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
+        txtNumComposiciones.setToolTipText("Datos del Compositor");
         txtNumComposiciones.setEnabled(false);
 
         btnSalir.setBackground(new java.awt.Color(255, 204, 204));
         btnSalir.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         btnSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/salirr.png"))); // NOI18N
         btnSalir.setText("Salir");
+        btnSalir.setToolTipText("Pulse aqui para salir de la pestaña");
         btnSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSalirActionPerformed(evt);
@@ -128,6 +133,7 @@ public class VentanaEliminarCancion extends javax.swing.JInternalFrame {
         btnBuscar.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         btnBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/buscar.png"))); // NOI18N
         btnBuscar.setText("Buscar");
+        btnBuscar.setToolTipText("Pulse aqui para buscar al Compositor");
         btnBuscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBuscarActionPerformed(evt);
@@ -148,15 +154,18 @@ public class VentanaEliminarCancion extends javax.swing.JInternalFrame {
         jLabel9.setText("Letra:");
 
         txtTitulo.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
+        txtTitulo.setToolTipText("Datos de la Canción");
         txtTitulo.setEnabled(false);
 
         txtLetra.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
+        txtLetra.setToolTipText("Datos de la Canción");
         txtLetra.setEnabled(false);
 
         btnSeleccionar.setBackground(new java.awt.Color(255, 153, 102));
         btnSeleccionar.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         btnSeleccionar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/seleccionarr.png"))); // NOI18N
         btnSeleccionar.setText("Seleccionar");
+        btnSeleccionar.setToolTipText("Pulse aqui para seleccionar al Compositor");
         btnSeleccionar.setEnabled(false);
         btnSeleccionar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -168,6 +177,7 @@ public class VentanaEliminarCancion extends javax.swing.JInternalFrame {
         btnCancelarSeleccion.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         btnCancelarSeleccion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cancelarr.png"))); // NOI18N
         btnCancelarSeleccion.setText("Cancelar seleccion");
+        btnCancelarSeleccion.setToolTipText("Pulse aqui para cancelar la seleccion al Compositor");
         btnCancelarSeleccion.setEnabled(false);
         btnCancelarSeleccion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -177,6 +187,7 @@ public class VentanaEliminarCancion extends javax.swing.JInternalFrame {
 
         cbxCancion.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         cbxCancion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Canciones" }));
+        cbxCancion.setToolTipText("Datos de la Canción");
         cbxCancion.setEnabled(false);
         cbxCancion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -188,6 +199,7 @@ public class VentanaEliminarCancion extends javax.swing.JInternalFrame {
         btnEliminarDisco.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         btnEliminarDisco.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cancionp.png"))); // NOI18N
         btnEliminarDisco.setText("Eliminar cancion");
+        btnEliminarDisco.setToolTipText("Pulse aqui para eliminar la Canción");
         btnEliminarDisco.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEliminarDiscoActionPerformed(evt);
@@ -198,6 +210,7 @@ public class VentanaEliminarCancion extends javax.swing.JInternalFrame {
         jLabel10.setText("Duración:");
 
         txtDuracion.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
+        txtDuracion.setToolTipText("Datos de la Canción");
         txtDuracion.setEnabled(false);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
