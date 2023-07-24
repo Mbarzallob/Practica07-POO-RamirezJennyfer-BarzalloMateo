@@ -118,7 +118,10 @@ public class CantanteDAO implements ICantanteDAO {
                             String nombreDisco = archivo.readUTF();
                             int anio = archivo.readInt();
                             cantante.agregarDisco(codigoDisco, nombreDisco, anio);
-                        } 
+                        } else{
+                            return cantante;
+                        }
+                        
 
                     }
                     return cantante;

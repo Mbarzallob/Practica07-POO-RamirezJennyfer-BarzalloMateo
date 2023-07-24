@@ -225,6 +225,7 @@ public class VentanaListarCantante extends javax.swing.JInternalFrame {
         List<Disco> listaDisco = controladorCantante.listarDiscos(cantante);
         if (!listaDisco.isEmpty()) {
             for (Disco disco : listaDisco) {
+
                 String codigoDisco = String.valueOf(disco.getCodigo());
                 String nombreDisco = disco.getNombre();
                 String anioLanzamiento = String.valueOf(disco.getAnioDeLanzamiento());
@@ -247,23 +248,25 @@ public class VentanaListarCantante extends javax.swing.JInternalFrame {
         List<Cantante> listaCantante = controladorCantante.listar();
         for (Cantante cantante : listaCantante) {
             String codigo = String.valueOf(cantante.getCodigo());
-            String nombre = cantante.getNombre();
-            String apellido = cantante.getApellido();
-            String edad = String.valueOf(cantante.getEdad());
-            String nacionalidad = cantante.getNacionalidad();
-            String salario = String.valueOf(cantante.calcularSalario());
-            String nombreArtistico = cantante.getNombreArtistico();
-            String generoMusical = cantante.getGeneroMusical();
-            String numSencillos = String.valueOf(cantante.getNumeroDeSencillos());
-            String numConciertos = String.valueOf(cantante.getNumeroDeConciertos());
-            String numGiras = String.valueOf(cantante.getNumeroDeGiras());
-            Object[] rowData = {codigo, nombre, apellido, edad, nacionalidad, salario, nombreArtistico, generoMusical, numSencillos, numConciertos, numGiras};
-            modelo.addRow(rowData);
+            if (!codigo.equals("0")) {
+                String nombre = cantante.getNombre();
+                String apellido = cantante.getApellido();
+                String edad = String.valueOf(cantante.getEdad());
+                String nacionalidad = cantante.getNacionalidad();
+                String salario = String.valueOf(cantante.calcularSalario());
+                String nombreArtistico = cantante.getNombreArtistico();
+                String generoMusical = cantante.getGeneroMusical();
+                String numSencillos = String.valueOf(cantante.getNumeroDeSencillos());
+                String numConciertos = String.valueOf(cantante.getNumeroDeConciertos());
+                String numGiras = String.valueOf(cantante.getNumeroDeGiras());
+                Object[] rowData = {codigo, nombre, apellido, edad, nacionalidad, salario, nombreArtistico, generoMusical, numSencillos, numConciertos, numGiras};
+                modelo.addRow(rowData);
+            }
         }
         tblCantante.setModel(modelo);
     }
-    
-    private void salir(){
+
+    private void salir() {
         DefaultTableModel modelo = (DefaultTableModel) tblDisco.getModel();
         modelo.setNumRows(0);
         tblDisco.setModel(modelo);

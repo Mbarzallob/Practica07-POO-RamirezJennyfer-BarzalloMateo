@@ -139,6 +139,8 @@ public class CompositorDAO implements ICompositorDAO {
                             String letra = archivo.readUTF();
                             double duracion = archivo.readDouble();
                             compositor.agregarCancion(codigoCancion, titulo, letra, duracion);
+                        }else{
+                            return compositor;
                         }
 
                     }
