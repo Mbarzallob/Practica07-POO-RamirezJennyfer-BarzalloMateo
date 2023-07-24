@@ -90,6 +90,7 @@ public class VentanaListarCantante extends javax.swing.JInternalFrame {
                 return canEdit [columnIndex];
             }
         });
+        tblCantante.setToolTipText("Datos de los Cantantes");
         tblCantante.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_ALL_COLUMNS);
         tblCantante.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         tblCantante.setSelectionBackground(new java.awt.Color(255, 204, 102));
@@ -105,6 +106,7 @@ public class VentanaListarCantante extends javax.swing.JInternalFrame {
         btnSalir.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         btnSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/salirr.png"))); // NOI18N
         btnSalir.setText("Salir");
+        btnSalir.setToolTipText("Pulse aqui para salir de la pestaña");
         btnSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSalirActionPerformed(evt);
@@ -129,7 +131,7 @@ public class VentanaListarCantante extends javax.swing.JInternalFrame {
                 return canEdit [columnIndex];
             }
         });
-        tblDisco.setToolTipText("");
+        tblDisco.setToolTipText("Datos de los Discos de los Cantantes");
         tblDisco.setCellSelectionEnabled(true);
         tblDisco.setSelectionBackground(new java.awt.Color(255, 204, 102));
         jScrollPane2.setViewportView(tblDisco);
