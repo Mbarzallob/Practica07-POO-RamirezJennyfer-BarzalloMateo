@@ -50,55 +50,52 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
+                  <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel9" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel13" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel14" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="txtEdad" alignment="0" max="32767" attributes="0"/>
-                              <Component id="txtNacionalidad" alignment="0" max="32767" attributes="0"/>
-                              <Component id="txtSalario" alignment="0" max="32767" attributes="0"/>
-                              <Component id="txtNumComposiciones" alignment="0" max="32767" attributes="0"/>
-                              <Component id="txtCodigo" max="32767" attributes="0"/>
-                              <Component id="txtNombre" alignment="0" max="32767" attributes="0"/>
-                              <Component id="txtApellido" alignment="0" max="32767" attributes="0"/>
-                              <Component id="cbxCanciones" alignment="0" pref="179" max="32767" attributes="0"/>
-                              <Component id="cbxCantantes" alignment="0" max="32767" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-                          <Component id="btnBuscar" min="-2" pref="105" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="210" max="-2" attributes="0"/>
-                          <Component id="btnSalir" min="-2" pref="106" max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="jLabel9" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel13" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel14" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="26" max="32767" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="txtEdad" alignment="0" max="32767" attributes="0"/>
+                      <Component id="txtNacionalidad" alignment="0" max="32767" attributes="0"/>
+                      <Component id="txtSalario" alignment="0" max="32767" attributes="0"/>
+                      <Component id="txtNumComposiciones" alignment="0" max="32767" attributes="0"/>
+                      <Component id="txtCodigo" max="32767" attributes="0"/>
+                      <Component id="txtNombre" alignment="0" max="32767" attributes="0"/>
+                      <Component id="txtApellido" alignment="0" max="32767" attributes="0"/>
+                      <Component id="cbxCanciones" alignment="0" pref="179" max="32767" attributes="0"/>
+                      <Component id="cbxCantantes" alignment="0" max="32767" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                  <Component id="btnBuscar" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="28" max="32767" attributes="0"/>
               </Group>
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="112" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="143" max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="btnSalir" min="-2" pref="106" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="233" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="txtCodigo" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
@@ -146,7 +143,7 @@
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="btnSalir" min="-2" pref="34" max="-2" attributes="0"/>
-                  <EmptySpace pref="31" max="32767" attributes="0"/>
+                  <EmptySpace pref="22" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -166,7 +163,7 @@
         <Component class="javax.swing.JLabel" name="jLabel2">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Cookies and Cheese Bold" size="14" style="1"/>
+              <Font name="Hug Me Tight" size="14" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Codigo:"/>
           </Properties>
@@ -174,7 +171,7 @@
         <Component class="javax.swing.JLabel" name="jLabel3">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Cookies and Cheese Bold" size="14" style="1"/>
+              <Font name="Hug Me Tight" size="14" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Nombre:"/>
           </Properties>
@@ -182,7 +179,7 @@
         <Component class="javax.swing.JLabel" name="jLabel4">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Cookies and Cheese Bold" size="14" style="1"/>
+              <Font name="Hug Me Tight" size="14" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Apellido:"/>
           </Properties>
@@ -190,7 +187,7 @@
         <Component class="javax.swing.JLabel" name="jLabel5">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Cookies and Cheese Bold" size="14" style="1"/>
+              <Font name="Hug Me Tight" size="14" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Edad:"/>
           </Properties>
@@ -198,7 +195,7 @@
         <Component class="javax.swing.JLabel" name="jLabel6">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Cookies and Cheese Bold" size="14" style="1"/>
+              <Font name="Hug Me Tight" size="14" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Nacionalidad:"/>
           </Properties>
@@ -206,7 +203,7 @@
         <Component class="javax.swing.JLabel" name="jLabel7">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Cookies and Cheese Bold" size="14" style="1"/>
+              <Font name="Hug Me Tight" size="14" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Salario:"/>
           </Properties>
@@ -214,7 +211,7 @@
         <Component class="javax.swing.JLabel" name="jLabel9">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Cookies and Cheese Bold" size="14" style="1"/>
+              <Font name="Hug Me Tight" size="14" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Numero de composiciones:"/>
           </Properties>
@@ -222,7 +219,7 @@
         <Component class="javax.swing.JTextField" name="txtCodigo">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Cookies and Cheese Bold" size="14" style="1"/>
+              <Font name="Hug Me Tight" size="14" style="0"/>
             </Property>
             <Property name="toolTipText" type="java.lang.String" value="Ingrese el codigo del Compositor a buscar EJM (0202)"/>
           </Properties>
@@ -230,7 +227,7 @@
         <Component class="javax.swing.JTextField" name="txtNombre">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Cookies and Cheese Bold" size="14" style="1"/>
+              <Font name="Hug Me Tight" size="14" style="0"/>
             </Property>
             <Property name="toolTipText" type="java.lang.String" value="Datos del Compositor"/>
             <Property name="enabled" type="boolean" value="false"/>
@@ -239,7 +236,7 @@
         <Component class="javax.swing.JTextField" name="txtApellido">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Cookies and Cheese Bold" size="14" style="1"/>
+              <Font name="Hug Me Tight" size="14" style="0"/>
             </Property>
             <Property name="toolTipText" type="java.lang.String" value="Datos del Compositor"/>
             <Property name="enabled" type="boolean" value="false"/>
@@ -248,7 +245,7 @@
         <Component class="javax.swing.JTextField" name="txtEdad">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Cookies and Cheese Bold" size="14" style="1"/>
+              <Font name="Hug Me Tight" size="14" style="0"/>
             </Property>
             <Property name="toolTipText" type="java.lang.String" value="Datos del Compositor"/>
             <Property name="enabled" type="boolean" value="false"/>
@@ -257,7 +254,7 @@
         <Component class="javax.swing.JTextField" name="txtNacionalidad">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Cookies and Cheese Bold" size="14" style="1"/>
+              <Font name="Hug Me Tight" size="14" style="0"/>
             </Property>
             <Property name="toolTipText" type="java.lang.String" value="Datos del Compositor"/>
             <Property name="enabled" type="boolean" value="false"/>
@@ -266,7 +263,7 @@
         <Component class="javax.swing.JTextField" name="txtSalario">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Cookies and Cheese Bold" size="14" style="1"/>
+              <Font name="Hug Me Tight" size="14" style="0"/>
             </Property>
             <Property name="toolTipText" type="java.lang.String" value="Datos del Compositor"/>
             <Property name="enabled" type="boolean" value="false"/>
@@ -275,7 +272,7 @@
         <Component class="javax.swing.JTextField" name="txtNumComposiciones">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Cookies and Cheese Bold" size="14" style="1"/>
+              <Font name="Hug Me Tight" size="14" style="0"/>
             </Property>
             <Property name="toolTipText" type="java.lang.String" value="Datos del Compositor"/>
             <Property name="enabled" type="boolean" value="false"/>
@@ -287,7 +284,7 @@
               <Color blue="cc" green="cc" red="ff" type="rgb"/>
             </Property>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Cookies and Cheese Bold" size="14" style="1"/>
+              <Font name="Hug Me Tight" size="14" style="0"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/imagenes/salirr.png"/>
@@ -302,7 +299,7 @@
         <Component class="javax.swing.JComboBox" name="cbxCanciones">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Cookies and Cheese Bold" size="14" style="1"/>
+              <Font name="Hug Me Tight" size="14" style="0"/>
             </Property>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="0"/>
@@ -316,7 +313,7 @@
         <Component class="javax.swing.JLabel" name="jLabel13">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Cookies and Cheese Bold" size="14" style="1"/>
+              <Font name="Hug Me Tight" size="14" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Canciones:"/>
           </Properties>
@@ -327,7 +324,7 @@
               <Color blue="ff" green="ff" red="cc" type="rgb"/>
             </Property>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Cookies and Cheese Bold" size="14" style="1"/>
+              <Font name="Hug Me Tight" size="14" style="0"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/imagenes/buscar.png"/>
@@ -342,7 +339,7 @@
         <Component class="javax.swing.JLabel" name="jLabel14">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Cookies and Cheese Bold" size="14" style="1"/>
+              <Font name="Hug Me Tight" size="14" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Cantantes:"/>
           </Properties>
@@ -350,7 +347,7 @@
         <Component class="javax.swing.JComboBox" name="cbxCantantes">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Cookies and Cheese Bold" size="14" style="1"/>
+              <Font name="Hug Me Tight" size="14" style="0"/>
             </Property>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="0"/>

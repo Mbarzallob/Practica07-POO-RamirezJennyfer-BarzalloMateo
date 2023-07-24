@@ -66,19 +66,23 @@ public class VentanaEliminarCompositor extends javax.swing.JInternalFrame {
         jPanel1.setBackground(new java.awt.Color(231, 252, 192));
 
         jLabel1.setFont(new java.awt.Font("Stay Dreaming", 1, 36)); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/compositor.png"))); // NOI18N
         jLabel1.setText("Eliminar datos de un compositor");
 
-        jLabel2.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         jLabel2.setText("Para eliminar el compositor ingrese el codigo del mismo: ");
 
-        jLabel3.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         jLabel3.setText("Codigo del compositor a eliminar:");
 
-        txtCodigo.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        txtCodigo.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
+        txtCodigo.setToolTipText("Ingrese el codigo del Compositor EJM (0101) ");
 
         btnEliminar.setBackground(new java.awt.Color(255, 204, 204));
-        btnEliminar.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        btnEliminar.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
+        btnEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/eliminarpersona.png"))); // NOI18N
         btnEliminar.setText("Eliminar");
+        btnEliminar.setToolTipText("Pulse aqui para eliminar el Compositor");
         btnEliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEliminarActionPerformed(evt);
@@ -92,37 +96,34 @@ public class VentanaEliminarCompositor extends javax.swing.JInternalFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(112, 112, 112)
-                        .addComponent(jLabel1))
+                        .addGap(124, 124, 124)
+                        .addComponent(jLabel3))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(104, 104, 104)
+                        .addGap(184, 184, 184)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtCodigo, javax.swing.GroupLayout.DEFAULT_SIZE, 125, Short.MAX_VALUE)
+                            .addComponent(btnEliminar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(40, 40, 40)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(51, 51, 51)
-                                .addComponent(jLabel3))))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(177, 177, 177)
-                        .addComponent(txtCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(191, 191, 191)
-                        .addComponent(btnEliminar)))
-                .addContainerGap(42, Short.MAX_VALUE))
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel2))))
+                .addContainerGap(33, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
+                .addGap(29, 29, 29)
                 .addComponent(jLabel1)
-                .addGap(31, 31, 31)
+                .addGap(27, 27, 27)
                 .addComponent(jLabel2)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel3)
-                .addGap(18, 18, 18)
+                .addGap(24, 24, 24)
                 .addComponent(txtCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnEliminar)
-                .addContainerGap(49, Short.MAX_VALUE))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
