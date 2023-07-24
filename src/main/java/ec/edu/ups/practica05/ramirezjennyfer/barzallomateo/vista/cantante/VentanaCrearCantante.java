@@ -42,7 +42,6 @@ public class VentanaCrearCantante extends javax.swing.JInternalFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
@@ -54,7 +53,6 @@ public class VentanaCrearCantante extends javax.swing.JInternalFrame {
         txtSalario = new javax.swing.JTextField();
         txtNombreArtistico = new javax.swing.JTextField();
         txtGeneroMusical = new javax.swing.JTextField();
-        txtNumSencillos = new javax.swing.JTextField();
         txtNumConciertos = new javax.swing.JTextField();
         txtNumGiras = new javax.swing.JTextField();
         btnRegistrarCantante = new javax.swing.JButton();
@@ -86,77 +84,74 @@ public class VentanaCrearCantante extends javax.swing.JInternalFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 204));
 
         jLabel1.setFont(new java.awt.Font("Stay Dreaming", 1, 36)); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cantantee.png"))); // NOI18N
         jLabel1.setText("Registrar datos de un cantante");
 
-        jLabel2.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         jLabel2.setText("Codigo: ");
 
-        jLabel3.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         jLabel3.setText("Nombre:");
 
-        jLabel4.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         jLabel4.setText("Apellido:");
 
-        jLabel5.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         jLabel5.setText("Edad:");
 
-        jLabel6.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         jLabel6.setText("Nacionalidad:");
 
-        jLabel7.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         jLabel7.setText("Salario:");
 
-        jLabel8.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         jLabel8.setText("Nombre artistico:");
 
-        jLabel9.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
-        jLabel9.setText("Numero de sencillos:");
-
-        jLabel10.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         jLabel10.setText("Genero musical:");
 
-        jLabel11.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         jLabel11.setText("Numero de conciertos:");
 
-        jLabel12.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        jLabel12.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         jLabel12.setText("Numero de giras:");
 
-        txtCodigo.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
-        txtCodigo.setToolTipText("Ingrese el codigo del Cantante EJM (0101)");
+        txtCodigo.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
+        txtCodigo.setToolTipText("Ingrese los datos del Cantante que desea registrar");
 
-        txtNombre.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
-        txtNombre.setToolTipText("Ingrese el nombre del Cantante EJM (Pepe)");
+        txtNombre.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
+        txtNombre.setToolTipText("Ingrese los datos del Cantante que desea registrar");
 
-        txtApellido.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
-        txtApellido.setToolTipText("Ingrese el apellido del Cantante EJM (Perez)");
+        txtApellido.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
+        txtApellido.setToolTipText("Ingrese los datos del Cantante que desea registrar");
 
-        txtEdad.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
-        txtEdad.setToolTipText("Ingrese la edad del Cantante EJM (18)");
+        txtEdad.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
+        txtEdad.setToolTipText("Ingrese los datos del Cantante que desea registrar");
 
-        txtNacionalidad.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
-        txtNacionalidad.setToolTipText("Ingrese la nacionalidad del Cantante EJM (Ecuatoriano)");
+        txtNacionalidad.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
+        txtNacionalidad.setToolTipText("Ingrese los datos del Cantante que desea registrar");
 
-        txtSalario.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
-        txtSalario.setToolTipText("Ingrese el salario del Cantante EJM (200)");
+        txtSalario.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
+        txtSalario.setToolTipText("Ingrese los datos del Cantante que desea registrar");
 
-        txtNombreArtistico.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
-        txtNombreArtistico.setToolTipText("Ingrese el nombre artistico del Cantante EJM (Pepito)");
+        txtNombreArtistico.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
+        txtNombreArtistico.setToolTipText("Ingrese los datos del Cantante que desea registrar");
 
-        txtGeneroMusical.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
-        txtGeneroMusical.setToolTipText("Ingrese el genero musical del Cantante EJM (Rock)");
+        txtGeneroMusical.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
+        txtGeneroMusical.setToolTipText("Ingrese los datos del Cantante que desea registrar");
 
-        txtNumSencillos.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
-        txtNumSencillos.setToolTipText("Ingrese el numero de sencillos del Cantante EJM (2)");
+        txtNumConciertos.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
+        txtNumConciertos.setToolTipText("Ingrese los datos del Cantante que desea registrar");
 
-        txtNumConciertos.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
-        txtNumConciertos.setToolTipText("Ingrese el numero de conciertos del Cantante EJM (2)");
-
-        txtNumGiras.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
-        txtNumGiras.setToolTipText("Ingrese el numero de giras del Cantante EJM (2)");
+        txtNumGiras.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
+        txtNumGiras.setToolTipText("Ingrese los datos del Cantante que desea registrar");
 
         btnRegistrarCantante.setBackground(new java.awt.Color(204, 255, 204));
-        btnRegistrarCantante.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        btnRegistrarCantante.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
+        btnRegistrarCantante.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/registrarpersona.png"))); // NOI18N
         btnRegistrarCantante.setText("Registrar");
+        btnRegistrarCantante.setToolTipText("Pulse aqu para registrar al Cantante");
         btnRegistrarCantante.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRegistrarCantanteActionPerformed(evt);
@@ -164,8 +159,10 @@ public class VentanaCrearCantante extends javax.swing.JInternalFrame {
         });
 
         btnSalir.setBackground(new java.awt.Color(255, 204, 204));
-        btnSalir.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        btnSalir.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
+        btnSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/salirr.png"))); // NOI18N
         btnSalir.setText("Salir");
+        btnSalir.setToolTipText("Pulse aqui para salir de la pestaña");
         btnSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSalirActionPerformed(evt);
@@ -179,11 +176,10 @@ public class VentanaCrearCantante extends javax.swing.JInternalFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(92, 92, 92)
+                        .addGap(75, 75, 75)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel12)
                             .addComponent(jLabel11)
-                            .addComponent(jLabel9)
                             .addComponent(jLabel10)
                             .addComponent(jLabel8)
                             .addComponent(jLabel7)
@@ -202,25 +198,24 @@ public class VentanaCrearCantante extends javax.swing.JInternalFrame {
                             .addComponent(txtSalario)
                             .addComponent(txtNombreArtistico)
                             .addComponent(txtGeneroMusical)
-                            .addComponent(txtNumSencillos)
                             .addComponent(txtNumConciertos)
                             .addComponent(txtNumGiras)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(108, 108, 108)
                         .addComponent(btnRegistrarCantante)
-                        .addGap(28, 28, 28)
-                        .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(31, 31, 31)
+                        .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(115, 115, 115)
+                        .addGap(50, 50, 50)
                         .addComponent(jLabel1)))
-                .addContainerGap(124, Short.MAX_VALUE))
+                .addContainerGap(71, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(26, 26, 26)
+                .addGap(25, 25, 25)
                 .addComponent(jLabel1)
-                .addGap(26, 26, 26)
+                .addGap(27, 27, 27)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
@@ -252,10 +247,6 @@ public class VentanaCrearCantante extends javax.swing.JInternalFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtGeneroMusical, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel10))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtNumSencillos, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel9))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtNumConciertos, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -297,10 +288,9 @@ public class VentanaCrearCantante extends javax.swing.JInternalFrame {
                 double salario = Double.parseDouble(txtSalario.getText());
                 String nombreArtistico = txtNombreArtistico.getText();
                 String generoMusical = txtGeneroMusical.getText();
-                int numeroSencillos = Integer.parseInt(txtNumSencillos.getText());
                 int numeroConciertos = Integer.parseInt(txtNumConciertos.getText());
                 int numeroGiras = Integer.parseInt(txtNumGiras.getText());
-                Cantante cantante = new Cantante(nombreArtistico, generoMusical, numeroSencillos, numeroConciertos, numeroGiras, codigo, nombre, apellido, edad, nacionalidad, salario);
+                Cantante cantante = new Cantante(nombreArtistico, generoMusical, numeroConciertos, numeroGiras, codigo, nombre, apellido, edad, nacionalidad, salario);
                 cantante.calcularSalario();
                 controladorCantante.agregarCantante(cantante);
                 JOptionPane.showMessageDialog(this, "Registro del cantante: " + cantante.getNombreArtistico());
@@ -331,7 +321,6 @@ public class VentanaCrearCantante extends javax.swing.JInternalFrame {
                 || txtNacionalidad.getText().isEmpty()
                 || txtNombreArtistico.getText().isEmpty()
                 || txtGeneroMusical.getText().isEmpty()
-                || txtNumSencillos.getText().isEmpty()
                 || txtNumConciertos.getText().isEmpty()
                 || txtNumGiras.getText().isEmpty()) {
             return false;
@@ -350,7 +339,6 @@ public class VentanaCrearCantante extends javax.swing.JInternalFrame {
         txtNombreArtistico.setText("");
         txtNumConciertos.setText("");
         txtNumGiras.setText("");
-        txtNumSencillos.setText("");
         txtSalario.setText("");
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -367,7 +355,6 @@ public class VentanaCrearCantante extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField txtApellido;
     private javax.swing.JTextField txtCodigo;
@@ -378,7 +365,6 @@ public class VentanaCrearCantante extends javax.swing.JInternalFrame {
     private javax.swing.JTextField txtNombreArtistico;
     private javax.swing.JTextField txtNumConciertos;
     private javax.swing.JTextField txtNumGiras;
-    private javax.swing.JTextField txtNumSencillos;
     private javax.swing.JTextField txtSalario;
     // End of variables declaration//GEN-END:variables
 }

@@ -87,102 +87,107 @@ public class VentanaBuscarCantante extends javax.swing.JInternalFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 204));
 
         jLabel1.setFont(new java.awt.Font("Stay Dreaming", 1, 36)); // NOI18N
-        jLabel1.setText("Datos del cantante");
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cantantee.png"))); // NOI18N
+        jLabel1.setText("Datos del Cantante");
 
-        jLabel2.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         jLabel2.setText("Codigo:");
 
-        jLabel3.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         jLabel3.setText("Nombre:");
 
-        jLabel4.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         jLabel4.setText("Apellido:");
 
-        jLabel5.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         jLabel5.setText("Edad:");
 
-        jLabel6.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         jLabel6.setText("Nacionalidad:");
 
-        jLabel7.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         jLabel7.setText("Salario:");
 
-        jLabel8.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         jLabel8.setText("Nombre artistico:");
 
-        jLabel9.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         jLabel9.setText("Numero de sencillos:");
 
-        jLabel10.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         jLabel10.setText("Genero musical:");
 
-        jLabel11.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         jLabel11.setText("Numero de conciertos:");
 
-        jLabel12.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        jLabel12.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         jLabel12.setText("Numero de giras:");
 
-        txtCodigo.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        txtCodigo.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         txtCodigo.setToolTipText("Ingrese el codigo del Cantante a buscar EJM (0101)");
 
-        txtNombre.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
-        txtNombre.setToolTipText("Aqui se muestra informacion del Cantante buscado");
+        txtNombre.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
+        txtNombre.setToolTipText("Datos del Cantante buscado");
         txtNombre.setEnabled(false);
 
-        txtApellido.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
-        txtApellido.setToolTipText("Aqui se muestra informacion del Cantante buscado");
+        txtApellido.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
+        txtApellido.setToolTipText("Datos del Cantante buscado");
         txtApellido.setEnabled(false);
 
-        txtEdad.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
-        txtEdad.setToolTipText("Aqui se muestra informacion del Cantante buscado");
+        txtEdad.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
+        txtEdad.setToolTipText("Datos del Cantante buscado");
         txtEdad.setEnabled(false);
 
-        txtNacionalidad.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
-        txtNacionalidad.setToolTipText("Aqui se muestra informacion del Cantante buscado");
+        txtNacionalidad.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
+        txtNacionalidad.setToolTipText("Datos del Cantante buscado");
         txtNacionalidad.setEnabled(false);
 
-        txtSalario.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
-        txtSalario.setToolTipText("Aqui se muestra informacion del Cantante buscado");
+        txtSalario.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
+        txtSalario.setToolTipText("Datos del Cantante buscado");
         txtSalario.setEnabled(false);
 
-        txtNombreArtistico.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
-        txtNombreArtistico.setToolTipText("Aqui se muestra informacion del Cantante buscado");
+        txtNombreArtistico.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
+        txtNombreArtistico.setToolTipText("Datos del Cantante buscado");
         txtNombreArtistico.setEnabled(false);
 
-        txtGeneroMusical.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
-        txtGeneroMusical.setToolTipText("Aqui se muestra informacion del Cantante buscado");
+        txtGeneroMusical.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
+        txtGeneroMusical.setToolTipText("Datos del Cantante buscado");
         txtGeneroMusical.setEnabled(false);
 
-        txtNumSencillos.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
-        txtNumSencillos.setToolTipText("Aqui se muestra informacion del Cantante buscado");
+        txtNumSencillos.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
+        txtNumSencillos.setToolTipText("Datos del Cantante buscado");
         txtNumSencillos.setEnabled(false);
 
-        txtNumConciertos.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
-        txtNumConciertos.setToolTipText("Aqui se muestra informacion del Cantante buscado");
+        txtNumConciertos.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
+        txtNumConciertos.setToolTipText("Datos del Cantante buscado");
         txtNumConciertos.setEnabled(false);
 
-        txtNumGiras.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
-        txtNumGiras.setToolTipText("Aqui se muestra informacion del Cantante buscado");
+        txtNumGiras.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
+        txtNumGiras.setToolTipText("Datos del Cantante buscado");
         txtNumGiras.setEnabled(false);
 
         btnSalir.setBackground(new java.awt.Color(255, 204, 204));
-        btnSalir.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        btnSalir.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
+        btnSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/salirr.png"))); // NOI18N
         btnSalir.setText("Salir");
+        btnSalir.setToolTipText("Pulse aqui para Salir de la pestaña");
         btnSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSalirActionPerformed(evt);
             }
         });
 
-        cbxDiscos.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
-        cbxDiscos.setToolTipText("Aqui se muestra los discos del Cantante buscado");
+        cbxDiscos.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
+        cbxDiscos.setToolTipText("Datos del Cantante buscado");
 
-        jLabel13.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        jLabel13.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         jLabel13.setText("Discografia:");
 
         btnBuscar.setBackground(new java.awt.Color(204, 255, 255));
-        btnBuscar.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        btnBuscar.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
+        btnBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/buscar.png"))); // NOI18N
         btnBuscar.setText("Buscar");
+        btnBuscar.setToolTipText("Pulse aqui para buscar al Cantante");
         btnBuscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBuscarActionPerformed(evt);
@@ -194,7 +199,11 @@ public class VentanaBuscarCantante extends javax.swing.JInternalFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(151, 151, 151))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 36, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel12)
                     .addComponent(jLabel11)
@@ -210,6 +219,7 @@ public class VentanaBuscarCantante extends javax.swing.JInternalFrame {
                     .addComponent(jLabel13))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtEdad, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -224,17 +234,9 @@ public class VentanaBuscarCantante extends javax.swing.JInternalFrame {
                             .addComponent(txtNombre)
                             .addComponent(txtApellido)
                             .addComponent(cbxDiscos, javax.swing.GroupLayout.Alignment.TRAILING, 0, 154, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGap(37, 37, 37)
                         .addComponent(btnBuscar)))
-                .addGap(43, 43, 43))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(169, 169, 169)
-                .addComponent(jLabel1)
-                .addContainerGap(109, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(175, 175, 175))
+                .addGap(40, 40, 40))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -286,13 +288,13 @@ public class VentanaBuscarCantante extends javax.swing.JInternalFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel12)
                     .addComponent(txtNumGiras, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cbxDiscos, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
+                .addGap(26, 26, 26)
                 .addComponent(btnSalir)
-                .addGap(31, 31, 31))
+                .addGap(23, 23, 23))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

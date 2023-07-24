@@ -43,7 +43,6 @@ public class VentanaActualizarCantante extends javax.swing.JInternalFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
@@ -55,7 +54,6 @@ public class VentanaActualizarCantante extends javax.swing.JInternalFrame {
         txtSalario = new javax.swing.JTextField();
         txtNombreArtistico = new javax.swing.JTextField();
         txtGeneroMusical = new javax.swing.JTextField();
-        txtNumSencillos = new javax.swing.JTextField();
         txtNumConciertos = new javax.swing.JTextField();
         txtNumGiras = new javax.swing.JTextField();
         btnSalir = new javax.swing.JButton();
@@ -88,54 +86,52 @@ public class VentanaActualizarCantante extends javax.swing.JInternalFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 204));
 
         jLabel1.setFont(new java.awt.Font("Stay Dreaming", 1, 36)); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cantantee.png"))); // NOI18N
         jLabel1.setText("Actualizar cantante");
 
-        jLabel2.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         jLabel2.setText("Codigo:");
 
-        jLabel3.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         jLabel3.setText("Nombre:");
 
-        jLabel4.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         jLabel4.setText("Apellido:");
 
-        jLabel5.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         jLabel5.setText("Edad:");
 
-        jLabel6.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         jLabel6.setText("Nacionalidad:");
 
-        jLabel7.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         jLabel7.setText("Salario:");
 
-        jLabel8.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         jLabel8.setText("Nombre artistico:");
 
-        jLabel9.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
-        jLabel9.setText("Numero de sencillos:");
-
-        jLabel10.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         jLabel10.setText("Genero musical:");
 
-        jLabel11.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         jLabel11.setText("Numero de conciertos:");
 
-        jLabel12.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        jLabel12.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         jLabel12.setText("Numero de giras:");
 
-        txtCodigo.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        txtCodigo.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         txtCodigo.setToolTipText("Ingrese el codigo del Cantante a actualizar EJM (0101)");
 
-        txtNombre.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
-        txtNombre.setToolTipText("Informacion del Cantante");
+        txtNombre.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
+        txtNombre.setToolTipText("Ingrese los nuevos datos del Cantante");
         txtNombre.setEnabled(false);
 
-        txtApellido.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
-        txtApellido.setToolTipText("Informacion del Cantante");
+        txtApellido.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
+        txtApellido.setToolTipText("Ingrese los nuevos datos del Cantante");
         txtApellido.setEnabled(false);
 
-        txtEdad.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
-        txtEdad.setToolTipText("Informacion del Cantante");
+        txtEdad.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
+        txtEdad.setToolTipText("Ingrese los nuevos datos del Cantante");
         txtEdad.setEnabled(false);
         txtEdad.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -143,20 +139,20 @@ public class VentanaActualizarCantante extends javax.swing.JInternalFrame {
             }
         });
 
-        txtNacionalidad.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
-        txtNacionalidad.setToolTipText("Informacion del Cantante");
+        txtNacionalidad.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
+        txtNacionalidad.setToolTipText("Ingrese los nuevos datos del Cantante");
         txtNacionalidad.setEnabled(false);
 
-        txtSalario.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
-        txtSalario.setToolTipText("Informacion del Cantante");
+        txtSalario.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
+        txtSalario.setToolTipText("Ingrese los nuevos datos del Cantante");
         txtSalario.setEnabled(false);
 
-        txtNombreArtistico.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
-        txtNombreArtistico.setToolTipText("Informacion del Cantante");
+        txtNombreArtistico.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
+        txtNombreArtistico.setToolTipText("Ingrese los nuevos datos del Cantante");
         txtNombreArtistico.setEnabled(false);
 
-        txtGeneroMusical.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
-        txtGeneroMusical.setToolTipText("Informacion del Cantante");
+        txtGeneroMusical.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
+        txtGeneroMusical.setToolTipText("Ingrese los nuevos datos del Cantante");
         txtGeneroMusical.setEnabled(false);
         txtGeneroMusical.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -164,21 +160,19 @@ public class VentanaActualizarCantante extends javax.swing.JInternalFrame {
             }
         });
 
-        txtNumSencillos.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
-        txtNumSencillos.setToolTipText("Informacion del Cantante");
-        txtNumSencillos.setEnabled(false);
-
-        txtNumConciertos.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
-        txtNumConciertos.setToolTipText("Informacion del Cantante");
+        txtNumConciertos.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
+        txtNumConciertos.setToolTipText("Ingrese los nuevos datos del Cantante");
         txtNumConciertos.setEnabled(false);
 
-        txtNumGiras.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
-        txtNumGiras.setToolTipText("Informacion del Cantante");
+        txtNumGiras.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
+        txtNumGiras.setToolTipText("Ingrese los nuevos datos del Cantante");
         txtNumGiras.setEnabled(false);
 
         btnSalir.setBackground(new java.awt.Color(255, 204, 204));
-        btnSalir.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        btnSalir.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
+        btnSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/salirr.png"))); // NOI18N
         btnSalir.setText("Salir");
+        btnSalir.setToolTipText("Pulse aqui para Salir de la pestaña");
         btnSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSalirActionPerformed(evt);
@@ -186,8 +180,10 @@ public class VentanaActualizarCantante extends javax.swing.JInternalFrame {
         });
 
         btnActualizarCantante.setBackground(new java.awt.Color(204, 255, 204));
-        btnActualizarCantante.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        btnActualizarCantante.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
+        btnActualizarCantante.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/actualizarpersona.png"))); // NOI18N
         btnActualizarCantante.setText("Actualizar");
+        btnActualizarCantante.setToolTipText("Pulse aqui para Actualizar al Cantante");
         btnActualizarCantante.setEnabled(false);
         btnActualizarCantante.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -196,8 +192,10 @@ public class VentanaActualizarCantante extends javax.swing.JInternalFrame {
         });
 
         btnBuscarCantante.setBackground(new java.awt.Color(204, 255, 255));
-        btnBuscarCantante.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        btnBuscarCantante.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
+        btnBuscarCantante.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/buscar.png"))); // NOI18N
         btnBuscarCantante.setText("Buscar cantante a actualizar");
+        btnBuscarCantante.setToolTipText("Pulse aqui para Buscar al Cantante a Actualizar");
         btnBuscarCantante.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBuscarCantanteActionPerformed(evt);
@@ -211,7 +209,7 @@ public class VentanaActualizarCantante extends javax.swing.JInternalFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(48, 48, 48)
+                        .addGap(30, 30, 30)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel12)
                             .addComponent(jLabel2)
@@ -222,7 +220,6 @@ public class VentanaActualizarCantante extends javax.swing.JInternalFrame {
                             .addComponent(jLabel7)
                             .addComponent(jLabel8)
                             .addComponent(jLabel10)
-                            .addComponent(jLabel9)
                             .addComponent(jLabel11))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -230,8 +227,7 @@ public class VentanaActualizarCantante extends javax.swing.JInternalFrame {
                             .addComponent(txtEdad, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(txtNumSencillos, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 154, Short.MAX_VALUE)
-                                    .addComponent(txtCodigo, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtCodigo, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 154, Short.MAX_VALUE)
                                     .addComponent(txtNombre, javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(txtApellido, javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(txtNacionalidad, javax.swing.GroupLayout.Alignment.LEADING)
@@ -242,21 +238,21 @@ public class VentanaActualizarCantante extends javax.swing.JInternalFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(btnBuscarCantante))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(162, 162, 162)
-                        .addComponent(jLabel1))
+                        .addGap(164, 164, 164)
+                        .addComponent(btnActualizarCantante, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(72, 72, 72)
+                        .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(158, 158, 158)
-                        .addComponent(btnActualizarCantante, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(42, 42, 42)
-                        .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(49, Short.MAX_VALUE))
+                        .addGap(199, 199, 199)
+                        .addComponent(jLabel1)))
+                .addContainerGap(25, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(18, 18, 18)
+                .addGap(16, 16, 16)
                 .addComponent(jLabel1)
-                .addGap(29, 29, 29)
+                .addGap(31, 31, 31)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnBuscarCantante, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(txtCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -289,10 +285,6 @@ public class VentanaActualizarCantante extends javax.swing.JInternalFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10)
                     .addComponent(txtGeneroMusical, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel9)
-                    .addComponent(txtNumSencillos, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11)
@@ -338,10 +330,9 @@ public class VentanaActualizarCantante extends javax.swing.JInternalFrame {
             double salario = Double.parseDouble(txtSalario.getText());
             String nombreArtistico = txtNombreArtistico.getText();
             String generoMusical = txtGeneroMusical.getText();
-            int numeroSencillos = Integer.parseInt(txtNumSencillos.getText());
             int numeroConciertos = Integer.parseInt(txtNumConciertos.getText());
             int numeroGiras = Integer.parseInt(txtNumGiras.getText());
-            Cantante cantante = new Cantante(nombreArtistico, generoMusical, numeroSencillos, numeroConciertos, numeroGiras, codigo, nombre, apellido, edad, nacionalidad, salario);
+            Cantante cantante = new Cantante(nombreArtistico, generoMusical, numeroConciertos, numeroGiras, codigo, nombre, apellido, edad, nacionalidad, salario);
 
             if (controladorCantante.actualizarCantante(cantante)) {
 
@@ -369,7 +360,6 @@ public class VentanaActualizarCantante extends javax.swing.JInternalFrame {
                 txtNombreArtistico.setText(cantante.getNombreArtistico());
                 txtNumConciertos.setText(String.valueOf(cantante.getNumeroDeConciertos()));
                 txtNumGiras.setText(String.valueOf(cantante.getNumeroDeGiras()));
-                txtNumSencillos.setText(String.valueOf(cantante.getNumeroDeSencillos()));
                 txtSalario.setText(String.valueOf(cantante.getSalario()));
                 cambiarEstado(true);
             } else {
@@ -405,7 +395,6 @@ public class VentanaActualizarCantante extends javax.swing.JInternalFrame {
         txtNombreArtistico.setText("");
         txtNumConciertos.setText("");
         txtNumGiras.setText("");
-        txtNumSencillos.setText("");
         txtSalario.setText("");
     }
 
@@ -419,7 +408,6 @@ public class VentanaActualizarCantante extends javax.swing.JInternalFrame {
         txtNombreArtistico.setEnabled(ena);
         txtNumConciertos.setEnabled(ena);
         txtNumGiras.setEnabled(ena);
-        txtNumSencillos.setEnabled(ena);
         txtSalario.setEnabled(ena);
         btnActualizarCantante.setEnabled(ena);
     }
@@ -433,7 +421,6 @@ public class VentanaActualizarCantante extends javax.swing.JInternalFrame {
                 || txtNacionalidad.getText().isEmpty()
                 || txtNombreArtistico.getText().isEmpty()
                 || txtGeneroMusical.getText().isEmpty()
-                || txtNumSencillos.getText().isEmpty()
                 || txtNumConciertos.getText().isEmpty()
                 || txtNumGiras.getText().isEmpty()) {
             return false;
@@ -457,7 +444,6 @@ public class VentanaActualizarCantante extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField txtApellido;
     private javax.swing.JTextField txtCodigo;
@@ -468,7 +454,6 @@ public class VentanaActualizarCantante extends javax.swing.JInternalFrame {
     private javax.swing.JTextField txtNombreArtistico;
     private javax.swing.JTextField txtNumConciertos;
     private javax.swing.JTextField txtNumGiras;
-    private javax.swing.JTextField txtNumSencillos;
     private javax.swing.JTextField txtSalario;
     // End of variables declaration//GEN-END:variables
 }

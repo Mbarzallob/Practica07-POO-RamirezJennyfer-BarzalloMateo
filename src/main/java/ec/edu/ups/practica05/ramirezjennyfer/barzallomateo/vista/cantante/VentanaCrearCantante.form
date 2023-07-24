@@ -52,11 +52,10 @@
               <Group type="102" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="92" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel9" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel10" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel8" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel7" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -76,7 +75,6 @@
                               <Component id="txtSalario" alignment="0" max="32767" attributes="0"/>
                               <Component id="txtNombreArtistico" alignment="0" max="32767" attributes="0"/>
                               <Component id="txtGeneroMusical" alignment="0" max="32767" attributes="0"/>
-                              <Component id="txtNumSencillos" alignment="0" max="32767" attributes="0"/>
                               <Component id="txtNumConciertos" alignment="0" max="32767" attributes="0"/>
                               <Component id="txtNumGiras" alignment="0" max="32767" attributes="0"/>
                           </Group>
@@ -84,24 +82,24 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="108" max="-2" attributes="0"/>
                           <Component id="btnRegistrarCantante" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                          <Component id="btnSalir" min="-2" pref="109" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                          <Component id="btnSalir" min="-2" pref="116" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="115" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
                           <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="124" max="32767" attributes="0"/>
+                  <EmptySpace pref="71" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="txtCodigo" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
                       <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -141,12 +139,7 @@
                       <Component id="txtGeneroMusical" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
                       <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="txtNumSencillos" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
-                      <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="txtNumConciertos" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
                       <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -172,13 +165,16 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Stay Dreaming" size="36" style="1"/>
             </Property>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/imagenes/cantantee.png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Registrar datos de un cantante"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel2">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Cookies and Cheese Bold" size="14" style="1"/>
+              <Font name="Hug Me Tight" size="14" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Codigo: "/>
           </Properties>
@@ -186,7 +182,7 @@
         <Component class="javax.swing.JLabel" name="jLabel3">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Cookies and Cheese Bold" size="14" style="1"/>
+              <Font name="Hug Me Tight" size="14" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Nombre:"/>
           </Properties>
@@ -194,7 +190,7 @@
         <Component class="javax.swing.JLabel" name="jLabel4">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Cookies and Cheese Bold" size="14" style="1"/>
+              <Font name="Hug Me Tight" size="14" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Apellido:"/>
           </Properties>
@@ -202,7 +198,7 @@
         <Component class="javax.swing.JLabel" name="jLabel5">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Cookies and Cheese Bold" size="14" style="1"/>
+              <Font name="Hug Me Tight" size="14" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Edad:"/>
           </Properties>
@@ -210,7 +206,7 @@
         <Component class="javax.swing.JLabel" name="jLabel6">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Cookies and Cheese Bold" size="14" style="1"/>
+              <Font name="Hug Me Tight" size="14" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Nacionalidad:"/>
           </Properties>
@@ -218,7 +214,7 @@
         <Component class="javax.swing.JLabel" name="jLabel7">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Cookies and Cheese Bold" size="14" style="1"/>
+              <Font name="Hug Me Tight" size="14" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Salario:"/>
           </Properties>
@@ -226,23 +222,15 @@
         <Component class="javax.swing.JLabel" name="jLabel8">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Cookies and Cheese Bold" size="14" style="1"/>
+              <Font name="Hug Me Tight" size="14" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Nombre artistico:"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="jLabel9">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Cookies and Cheese Bold" size="14" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Numero de sencillos:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel10">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Cookies and Cheese Bold" size="14" style="1"/>
+              <Font name="Hug Me Tight" size="14" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Genero musical:"/>
           </Properties>
@@ -250,7 +238,7 @@
         <Component class="javax.swing.JLabel" name="jLabel11">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Cookies and Cheese Bold" size="14" style="1"/>
+              <Font name="Hug Me Tight" size="14" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Numero de conciertos:"/>
           </Properties>
@@ -258,7 +246,7 @@
         <Component class="javax.swing.JLabel" name="jLabel12">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Cookies and Cheese Bold" size="14" style="1"/>
+              <Font name="Hug Me Tight" size="14" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Numero de giras:"/>
           </Properties>
@@ -266,89 +254,81 @@
         <Component class="javax.swing.JTextField" name="txtCodigo">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Cookies and Cheese Bold" size="14" style="1"/>
+              <Font name="Hug Me Tight" size="14" style="0"/>
             </Property>
-            <Property name="toolTipText" type="java.lang.String" value="Ingrese el codigo del Cantante EJM (0101)"/>
+            <Property name="toolTipText" type="java.lang.String" value="Ingrese los datos del Cantante que desea registrar"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtNombre">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Cookies and Cheese Bold" size="14" style="1"/>
+              <Font name="Hug Me Tight" size="14" style="0"/>
             </Property>
-            <Property name="toolTipText" type="java.lang.String" value="Ingrese el nombre del Cantante EJM (Pepe)"/>
+            <Property name="toolTipText" type="java.lang.String" value="Ingrese los datos del Cantante que desea registrar"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtApellido">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Cookies and Cheese Bold" size="14" style="1"/>
+              <Font name="Hug Me Tight" size="14" style="0"/>
             </Property>
-            <Property name="toolTipText" type="java.lang.String" value="Ingrese el apellido del Cantante EJM (Perez)"/>
+            <Property name="toolTipText" type="java.lang.String" value="Ingrese los datos del Cantante que desea registrar"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtEdad">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Cookies and Cheese Bold" size="14" style="1"/>
+              <Font name="Hug Me Tight" size="14" style="0"/>
             </Property>
-            <Property name="toolTipText" type="java.lang.String" value="Ingrese la edad del Cantante EJM (18)"/>
+            <Property name="toolTipText" type="java.lang.String" value="Ingrese los datos del Cantante que desea registrar"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtNacionalidad">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Cookies and Cheese Bold" size="14" style="1"/>
+              <Font name="Hug Me Tight" size="14" style="0"/>
             </Property>
-            <Property name="toolTipText" type="java.lang.String" value="Ingrese la nacionalidad del Cantante EJM (Ecuatoriano)"/>
+            <Property name="toolTipText" type="java.lang.String" value="Ingrese los datos del Cantante que desea registrar"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtSalario">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Cookies and Cheese Bold" size="14" style="1"/>
+              <Font name="Hug Me Tight" size="14" style="0"/>
             </Property>
-            <Property name="toolTipText" type="java.lang.String" value="Ingrese el salario del Cantante EJM (200)"/>
+            <Property name="toolTipText" type="java.lang.String" value="Ingrese los datos del Cantante que desea registrar"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtNombreArtistico">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Cookies and Cheese Bold" size="14" style="1"/>
+              <Font name="Hug Me Tight" size="14" style="0"/>
             </Property>
-            <Property name="toolTipText" type="java.lang.String" value="Ingrese el nombre artistico del Cantante EJM (Pepito)"/>
+            <Property name="toolTipText" type="java.lang.String" value="Ingrese los datos del Cantante que desea registrar"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtGeneroMusical">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Cookies and Cheese Bold" size="14" style="1"/>
+              <Font name="Hug Me Tight" size="14" style="0"/>
             </Property>
-            <Property name="toolTipText" type="java.lang.String" value="Ingrese el genero musical del Cantante EJM (Rock)"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="txtNumSencillos">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Cookies and Cheese Bold" size="14" style="1"/>
-            </Property>
-            <Property name="toolTipText" type="java.lang.String" value="Ingrese el numero de sencillos del Cantante EJM (2)"/>
+            <Property name="toolTipText" type="java.lang.String" value="Ingrese los datos del Cantante que desea registrar"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtNumConciertos">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Cookies and Cheese Bold" size="14" style="1"/>
+              <Font name="Hug Me Tight" size="14" style="0"/>
             </Property>
-            <Property name="toolTipText" type="java.lang.String" value="Ingrese el numero de conciertos del Cantante EJM (2)"/>
+            <Property name="toolTipText" type="java.lang.String" value="Ingrese los datos del Cantante que desea registrar"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtNumGiras">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Cookies and Cheese Bold" size="14" style="1"/>
+              <Font name="Hug Me Tight" size="14" style="0"/>
             </Property>
-            <Property name="toolTipText" type="java.lang.String" value="Ingrese el numero de giras del Cantante EJM (2)"/>
+            <Property name="toolTipText" type="java.lang.String" value="Ingrese los datos del Cantante que desea registrar"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="btnRegistrarCantante">
@@ -357,9 +337,13 @@
               <Color blue="cc" green="ff" red="cc" type="rgb"/>
             </Property>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Cookies and Cheese Bold" size="14" style="1"/>
+              <Font name="Hug Me Tight" size="14" style="0"/>
+            </Property>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/imagenes/registrarpersona.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Registrar"/>
+            <Property name="toolTipText" type="java.lang.String" value="Pulse aqu para registrar al Cantante"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRegistrarCantanteActionPerformed"/>
@@ -371,9 +355,13 @@
               <Color blue="cc" green="cc" red="ff" type="rgb"/>
             </Property>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Cookies and Cheese Bold" size="14" style="1"/>
+              <Font name="Hug Me Tight" size="14" style="0"/>
+            </Property>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/imagenes/salirr.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Salir"/>
+            <Property name="toolTipText" type="java.lang.String" value="Pulse aqui para salir de la pesta&#xf1;a"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSalirActionPerformed"/>
