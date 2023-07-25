@@ -265,7 +265,7 @@ public class VentanaActualizarCompositor extends javax.swing.JInternalFrame {
                 this.limpiarCampos();
                 this.cambiarEstado(false);
             } else {
-                JOptionPane.showMessageDialog(this, "El compositor ha sido actualizado exitosamente! :)");
+                JOptionPane.showMessageDialog(this, "El compositor no ha sido actualizado exitosamente! :)");
             }
         } else {
             JOptionPane.showMessageDialog(this, "CAMPOS OBLIGATORIOS POR LLENAR");
