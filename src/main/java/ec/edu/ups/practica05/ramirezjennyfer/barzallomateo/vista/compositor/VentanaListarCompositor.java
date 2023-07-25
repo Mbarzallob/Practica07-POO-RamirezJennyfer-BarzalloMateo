@@ -264,18 +264,20 @@ public class VentanaListarCompositor extends javax.swing.JInternalFrame {
         DefaultTableModel modelo = (DefaultTableModel) tblCompositor.getModel();
         modelo.setNumRows(0);
         List<Compositor> listaCompositors = controladorCompositor.listar();
-        for (Compositor compositor : listaCompositors) {
-            String codigo = String.valueOf(compositor.getCodigo());
-            String nombre = compositor.getNombre();
-            String edad = String.valueOf(compositor.getEdad());
-            String nacionalidad = compositor.getNacionalidad();
-            String apellido = compositor.getApellido();
-            String salario = String.valueOf(compositor.getSalario());
-            String numComposiciones = String.valueOf(compositor.getNumeroDeComposiciones());
-            Object[] rowData = {codigo, nombre, apellido, edad, nacionalidad, salario, numComposiciones};
-            modelo.addRow(rowData);
+        if (listaCompositors != null) {
+            for (Compositor compositor : listaCompositors) {
+                String codigo = String.valueOf(compositor.getCodigo());
+                String nombre = compositor.getNombre();
+                String edad = String.valueOf(compositor.getEdad());
+                String nacionalidad = compositor.getNacionalidad();
+                String apellido = compositor.getApellido();
+                String salario = String.valueOf(compositor.getSalario());
+                String numComposiciones = String.valueOf(compositor.getNumeroDeComposiciones());
+                Object[] rowData = {codigo, nombre, apellido, edad, nacionalidad, salario, numComposiciones};
+                modelo.addRow(rowData);
+            }
+            tblCompositor.setModel(modelo);
         }
-        tblCompositor.setModel(modelo);
     }
 
     private void cargarTablasExtras() {

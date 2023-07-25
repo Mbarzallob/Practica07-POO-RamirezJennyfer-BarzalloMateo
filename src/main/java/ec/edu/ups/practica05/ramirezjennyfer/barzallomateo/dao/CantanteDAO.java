@@ -319,30 +319,35 @@ public class CantanteDAO implements ICantanteDAO {
     }
 
     @Override
-    public void updateDisco(Cantante cantante, int codigo, String nombre, int anioDeLanzamiento) {
-        try {
-            archivo.seek(0);
+public void updateDisco(Cantante cantante, int codigo, String nombre, int anioDeLanzamiento) {
+    try {
+        archivo.seek(0);
 
-            for (int i = 0; i < this.tamañoArchivo(); i += 399) {
-                archivo.seek(i);
-                if (archivo.readInt() == cantante.getCodigo()) {
-                    for (int j = 0; j < 10; j++) {
-                        archivo.seek(i + 149 + (j * 25));
-                        if (archivo.readInt() == codigo) {
+        for (int i = 0; i < this.tamañoArchivo(); i += 399) {
+            archivo.seek(i);
+            if (archivo.readInt() == cantante.getCodigo()) {
+                for (int j = 0; j < 10; j++) {
+                    int codigoDisco = archivo.readInt();
+                    long currentPointer = archivo.getFilePointer(); // Guardamos la posición actual del puntero
 
-                            archivo.writeUTF(this.relleno(nombre, 15));
-                            archivo.writeInt(anioDeLanzamiento);
-                            return;
-                        }
-
+                    if (codigoDisco == codigo) {
+                        archivo.seek(currentPointer);
+                        archivo.writeUTF(this.relleno(nombre, 15));
+                        archivo.writeInt(anioDeLanzamiento);
+                        return;
                     }
+
+                    // Si no es el disco que buscamos, avanzamos el puntero al siguiente registro.
+                    archivo.seek(currentPointer + 25);
                 }
             }
-
-        } catch (IOException e) {
-
         }
+
+    } catch (IOException e) {
+        e.printStackTrace();
     }
+}
+
 
     @Override
     public void deleteDisco(Cantante cantante, int codigo, String nombre, int anioDeLanzamiento) {

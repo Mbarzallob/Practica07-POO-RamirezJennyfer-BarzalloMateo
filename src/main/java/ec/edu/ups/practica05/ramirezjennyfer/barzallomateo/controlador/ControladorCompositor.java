@@ -81,14 +81,12 @@ public class ControladorCompositor {
         this.cantante = cantanteDAO.read(cantante.getCodigo());
 
         this.compositorDAO.createCliente(this.compositor, this.cantante);
-        compositorDAO.update(this.compositor);
     }
 
     public void eliminarCliente(Compositor compositor, Cantante cantante) {
         this.compositor = compositorDAO.read(compositor.getCodigo());
         this.cantante = cantanteDAO.read(cantante.getCodigo());
         this.compositorDAO.deleteCliente(this.compositor, this.cantante);
-        compositorDAO.update(this.compositor);
     }
 
     public List<Cantante> listarCantantes(Compositor compositor) {
@@ -113,7 +111,6 @@ public class ControladorCompositor {
     public void agregarCancion(Compositor compositor, int codigo, String titulo, String letra, double tiempoEnMinutos) {
         this.compositor = compositorDAO.read(compositor.getCodigo());
         compositorDAO.createCancion(this.compositor, codigo, titulo, letra, tiempoEnMinutos);
-        compositorDAO.update(this.compositor);
     }
 
     public Cancion buscarCancion(Compositor compositor, int codigo) {
@@ -126,7 +123,6 @@ public class ControladorCompositor {
         Cancion cancion = this.buscarCancion(this.compositor, codigo);
         if (cancion != null) {
             compositorDAO.deleteCancion(this.compositor, codigo, titulo, letra, tiempoEnMinutos);
-            compositorDAO.update(this.compositor);
             return true;
         } else {
             return false;

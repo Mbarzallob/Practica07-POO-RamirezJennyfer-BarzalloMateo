@@ -87,7 +87,6 @@ public class CompositorDAO implements ICompositorDAO {
             }
 
             for (int i = 0; i < 10; i++) {
-                archivo.seek(this.tamañoArchivo());
                 archivo.writeInt(0);
 
                 archivo.writeUTF(this.rellenoCadena("", 25));
@@ -139,7 +138,7 @@ public class CompositorDAO implements ICompositorDAO {
                             String letra = archivo.readUTF();
                             double duracion = archivo.readDouble();
                             compositor.agregarCancion(codigoCancion, titulo, letra, duracion);
-                        }else{
+                        } else {
                             return compositor;
                         }
 
@@ -363,26 +362,30 @@ public class CompositorDAO implements ICompositorDAO {
             archivo.seek(0);
             for (int i = 0; i < this.tamañoArchivo(); i += 4892) {
                 archivo.seek(i);
-                archivo.seek(i);
                 int cod = archivo.readInt();
                 String nombre = archivo.readUTF();
                 String apellido = archivo.readUTF();
                 int edad = archivo.readInt();
                 String nacionalidad = archivo.readUTF();
                 double salario = archivo.readDouble();
+                System.out.println("1");
                 Compositor compositor = new Compositor(cod, nombre, apellido, edad, nacionalidad, salario);
                 for (int j = 0; j < 10; j++) {
+                    System.out.println("22");
                     int codigoCancion = archivo.readInt();
                     if (codigoCancion != 0) {
                         String titulo = archivo.readUTF();
                         String letra = archivo.readUTF();
                         double duracion = archivo.readDouble();
+                        System.out.println("2");
                         compositor.agregarCancion(codigoCancion, titulo, letra, duracion);
                     }
 
                 }
+
                 for (int j = 0; j < 10; j++) {
                     int codCantante = archivo.readInt();
+                    System.out.println("33");
                     if (codCantante != 0) {
                         String nombreCantante = archivo.readUTF();
                         String apellidoCantante = archivo.readUTF();
@@ -393,6 +396,7 @@ public class CompositorDAO implements ICompositorDAO {
                         String genero = archivo.readUTF();
                         int numConciertos = archivo.readInt();
                         int numGiras = archivo.readInt();
+                        System.out.println("3");
                         Cantante cantante = new Cantante(nombreArtistico, genero, numConciertos, numGiras, codCantante, nombreCantante, apellidoCantante, edadCantante, nacionalidadCantante, salarioCantante);
 
                         for (int k = 0; k < 10; k++) {
@@ -401,20 +405,23 @@ public class CompositorDAO implements ICompositorDAO {
                             if (codigoDisco != 0) {
                                 String nombreDisco = archivo.readUTF();
                                 int anio = archivo.readInt();
+                                System.out.println("4");
                                 cantante.agregarDisco(codigoDisco, nombreDisco, anio);
-                            } else {
-                                break;
                             }
 
                         }
                         compositor.agregarCliente(cantante);
                     }
                 }
+
+                System.out.println("soso");
                 lista.add(compositor);
 
             }
+            System.out.println("nono");
             return lista;
         } catch (IOException e) {
+            System.out.println(e);
             return null;
         }
 

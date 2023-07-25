@@ -8,6 +8,7 @@ import ec.edu.ups.practica05.ramirezjennyfer.barzallomateo.controlador.Controlad
 import ec.edu.ups.practica05.ramirezjennyfer.barzallomateo.controlador.ControladorCompositor;
 import ec.edu.ups.practica05.ramirezjennyfer.barzallomateo.dao.CantanteDAO;
 import ec.edu.ups.practica05.ramirezjennyfer.barzallomateo.dao.CompositorDAO;
+import ec.edu.ups.practica05.ramirezjennyfer.barzallomateo.modelo.Cantante;
 import ec.edu.ups.practica05.ramirezjennyfer.barzallomateo.modelo.Compositor;
 
 /**
@@ -26,7 +27,9 @@ public class mainpruebas {
         ControladorCompositor cccc = new ControladorCompositor(ccc, cc);
         Compositor compositor = new Compositor(1, "MateoAmor", "Barzooo", 0, "Ec", 0);
         cccc.actualizarCompositor(compositor);
-        System.out.println(cccc.buscarCompositor(1).getNombre());
+        Cantante cantante = new Cantante("hola", "no", 0, 0, 1, "", "", 0, "", 0);
+        c.actualizarDisco(cantante, 2, "no", 21);
+        System.out.println(c.buscarDisco(cantante,2).getNombre());
     }
     
 }

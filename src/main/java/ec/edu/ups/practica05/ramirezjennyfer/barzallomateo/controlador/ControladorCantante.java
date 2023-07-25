@@ -90,7 +90,6 @@ public class ControladorCantante {
         Disco disco = this.buscarDisco(this.cantante, codigo);
         if (disco != null) {
             cantanteDAO.deleteDisco(this.cantante, codigo, nombre, anioDeLanzamiento);
-            cantanteDAO.update(this.cantante);
             return true;
         } else {
             return false;
@@ -99,10 +98,9 @@ public class ControladorCantante {
 
     public boolean actualizarDisco(Cantante cantante, int codigo, String nombre, int anioDeLanzamiento) {
         this.cantante = cantanteDAO.read(cantante.getCodigo());
-        Disco disco = this.buscarDisco(cantante, codigo);
+        Disco disco = this.buscarDisco(this.cantante, codigo);
         if (disco != null) {
             cantanteDAO.updateDisco(this.cantante, codigo, nombre, anioDeLanzamiento);
-            cantanteDAO.update(this.cantante);
             return true;
         } else {
             return false;
