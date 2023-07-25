@@ -101,7 +101,7 @@ public class VentanaBuscarDisco extends javax.swing.JInternalFrame {
         jLabel10.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
         jLabel10.setText("Genero musical:");
 
-        txtCodigo.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        txtCodigo.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         txtCodigo.setToolTipText("Ingrese el codigo del Cantante EJM (0101)");
 
         txtNombre.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
@@ -155,7 +155,7 @@ public class VentanaBuscarDisco extends javax.swing.JInternalFrame {
         txtNombreDisco.setToolTipText("Datos del Disco");
         txtNombreDisco.setEnabled(false);
 
-        txtAnioLanzamiento.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        txtAnioLanzamiento.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         txtAnioLanzamiento.setToolTipText("Datos del Disco");
         txtAnioLanzamiento.setEnabled(false);
 
@@ -183,7 +183,7 @@ public class VentanaBuscarDisco extends javax.swing.JInternalFrame {
             }
         });
 
-        cbxDisco.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        cbxDisco.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         cbxDisco.setToolTipText("Datos del Disco");
         cbxDisco.setEnabled(false);
         cbxDisco.addActionListener(new java.awt.event.ActionListener() {

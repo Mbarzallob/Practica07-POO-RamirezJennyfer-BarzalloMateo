@@ -147,10 +147,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         menuItemActualizarCliente = new javax.swing.JMenuItem();
         menuItemEliminarCliente = new javax.swing.JMenuItem();
         menuItemListarCliente = new javax.swing.JMenuItem();
-        helpMenu = new javax.swing.JMenu();
-        menuItemEspanol = new javax.swing.JMenuItem();
-        menuItemEnglish = new javax.swing.JMenuItem();
-        menuItemFrancais = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
         menuItemSalir = new javax.swing.JMenuItem();
 
@@ -417,38 +413,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         menuBar.add(editMenu);
 
-        helpMenu.setMnemonic('h');
-        helpMenu.setText("Idioma");
-
-        menuItemEspanol.setMnemonic('c');
-        menuItemEspanol.setText("Español");
-        menuItemEspanol.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                menuItemEspanolActionPerformed(evt);
-            }
-        });
-        helpMenu.add(menuItemEspanol);
-
-        menuItemEnglish.setMnemonic('a');
-        menuItemEnglish.setText("English");
-        menuItemEnglish.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                menuItemEnglishActionPerformed(evt);
-            }
-        });
-        helpMenu.add(menuItemEnglish);
-
-        menuItemFrancais.setMnemonic('a');
-        menuItemFrancais.setText("Francais");
-        menuItemFrancais.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                menuItemFrancaisActionPerformed(evt);
-            }
-        });
-        helpMenu.add(menuItemFrancais);
-
-        menuBar.add(helpMenu);
-
         jMenu4.setText("Opciones");
 
         menuItemSalir.setText("Salir");
@@ -679,18 +643,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         ventanaListarCliente.setVisible(true);
     }//GEN-LAST:event_menuItemListarClienteActionPerformed
 
-    private void menuItemEspanolActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuItemEspanolActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_menuItemEspanolActionPerformed
-
-    private void menuItemEnglishActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuItemEnglishActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_menuItemEnglishActionPerformed
-
-    private void menuItemFrancaisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuItemFrancaisActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_menuItemFrancaisActionPerformed
-
     private void menuItemSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuItemSalirActionPerformed
         System.exit(0);
     }//GEN-LAST:event_menuItemSalirActionPerformed
@@ -736,7 +688,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JDesktopPane desktopPane;
     private javax.swing.JMenu editMenu;
     private javax.swing.JMenu fileMenu;
-    private javax.swing.JMenu helpMenu;
     private javax.swing.JMenuItem itemMenuCrearCantante;
     private javax.swing.JMenuItem itemMenuEliminarCantante;
     private javax.swing.JMenuItem itemMenuRegistrarDisco;
@@ -761,9 +712,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem menuItemEliminarCliente;
     private javax.swing.JMenuItem menuItemEliminarCompositor;
     private javax.swing.JMenuItem menuItemEliminarDisco;
-    private javax.swing.JMenuItem menuItemEnglish;
-    private javax.swing.JMenuItem menuItemEspanol;
-    private javax.swing.JMenuItem menuItemFrancais;
     private javax.swing.JMenuItem menuItemIngresarCliente;
     private javax.swing.JMenuItem menuItemListarCancion;
     private javax.swing.JMenuItem menuItemListarCantante;

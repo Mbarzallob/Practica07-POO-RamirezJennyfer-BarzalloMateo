@@ -77,7 +77,7 @@ public class VentanaEliminarCliente extends javax.swing.JInternalFrame {
         jPanel1.setBackground(new java.awt.Color(255, 204, 153));
 
         tblCompositor.setBackground(new java.awt.Color(255, 204, 102));
-        tblCompositor.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        tblCompositor.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         tblCompositor.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -102,7 +102,7 @@ public class VentanaEliminarCliente extends javax.swing.JInternalFrame {
         jScrollPane3.setViewportView(tblCompositor);
 
         tblCantante.setBackground(new java.awt.Color(255, 204, 102));
-        tblCantante.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        tblCantante.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         tblCantante.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 

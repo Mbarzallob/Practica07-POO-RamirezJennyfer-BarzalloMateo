@@ -248,7 +248,7 @@
         <Component class="javax.swing.JTextField" name="txtCodigo">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Cookies and Cheese Bold" size="14" style="1"/>
+              <Font name="Hug Me Tight" size="14" style="0"/>
             </Property>
             <Property name="toolTipText" type="java.lang.String" value="Ingrese el codigo del Cantante EJM (0101)"/>
           </Properties>
@@ -363,7 +363,7 @@
         <Component class="javax.swing.JTextField" name="txtCodigoDisco">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Cookies and Cheese Bold" size="14" style="1"/>
+              <Font name="Hug Me Tight" size="14" style="0"/>
             </Property>
             <Property name="toolTipText" type="java.lang.String" value="Ingrese el codigo del Disco del Cantante EJM (01)"/>
             <Property name="enabled" type="boolean" value="false"/>
@@ -381,7 +381,7 @@
         <Component class="javax.swing.JTextField" name="txtAnioLanzamiento">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Cookies and Cheese Bold" size="14" style="1"/>
+              <Font name="Hug Me Tight" size="14" style="0"/>
             </Property>
             <Property name="toolTipText" type="java.lang.String" value="Ingrese el a&#xf1;o de lanzamiento del Disco del Cantante EJM (2002)"/>
             <Property name="enabled" type="boolean" value="false"/>

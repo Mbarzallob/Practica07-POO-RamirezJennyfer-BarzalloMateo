@@ -103,7 +103,7 @@ public class VentanaCrearDisco extends javax.swing.JInternalFrame {
         jLabel10.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
         jLabel10.setText("Genero musical:");
 
-        txtCodigo.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        txtCodigo.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         txtCodigo.setToolTipText("Ingrese el codigo del Cantante EJM (0101)");
 
         txtNombre.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
@@ -157,7 +157,7 @@ public class VentanaCrearDisco extends javax.swing.JInternalFrame {
         jLabel9.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
         jLabel9.setText("Ano de lanzamiento:");
 
-        txtCodigoDisco.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        txtCodigoDisco.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         txtCodigoDisco.setToolTipText("Ingrese el codigo del Disco del Cantante EJM (01)");
         txtCodigoDisco.setEnabled(false);
 
@@ -165,7 +165,7 @@ public class VentanaCrearDisco extends javax.swing.JInternalFrame {
         txtNombreDisco.setToolTipText("Ingrese el nombre del Disco del Cantante EJM (Flores)");
         txtNombreDisco.setEnabled(false);
 
-        txtAnioLanzamiento.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        txtAnioLanzamiento.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         txtAnioLanzamiento.setToolTipText("Ingrese el año de lanzamiento del Disco del Cantante EJM (2002)");
         txtAnioLanzamiento.setEnabled(false);
 

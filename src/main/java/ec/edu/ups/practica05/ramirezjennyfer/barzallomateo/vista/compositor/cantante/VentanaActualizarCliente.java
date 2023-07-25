@@ -80,7 +80,7 @@ public class VentanaActualizarCliente extends javax.swing.JInternalFrame {
         jPanel1.setBackground(new java.awt.Color(255, 204, 153));
 
         tblCompositor.setBackground(new java.awt.Color(255, 204, 102));
-        tblCompositor.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        tblCompositor.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         tblCompositor.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -105,7 +105,7 @@ public class VentanaActualizarCliente extends javax.swing.JInternalFrame {
         jScrollPane3.setViewportView(tblCompositor);
 
         tblCantante.setBackground(new java.awt.Color(255, 204, 102));
-        tblCantante.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        tblCantante.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         tblCantante.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -147,7 +147,7 @@ public class VentanaActualizarCliente extends javax.swing.JInternalFrame {
         jLabel2.setText("Seleccione el nuevo cliente");
 
         tblClientes.setBackground(new java.awt.Color(255, 204, 102));
-        tblClientes.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        tblClientes.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         tblClientes.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -225,7 +225,7 @@ public class VentanaActualizarCliente extends javax.swing.JInternalFrame {
                     .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnActualizar)
                     .addComponent(btnSalir))
                 .addContainerGap())

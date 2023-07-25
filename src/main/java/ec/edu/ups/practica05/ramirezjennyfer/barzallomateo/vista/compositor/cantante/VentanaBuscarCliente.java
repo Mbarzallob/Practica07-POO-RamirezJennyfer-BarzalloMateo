@@ -121,7 +121,7 @@ public class VentanaBuscarCliente extends javax.swing.JInternalFrame {
         jLabel8.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
         jLabel8.setText("Numero de composiciones");
 
-        txtCodigo.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        txtCodigo.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
 
         txtNombre.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
         txtNombre.setEnabled(false);
@@ -129,7 +129,7 @@ public class VentanaBuscarCliente extends javax.swing.JInternalFrame {
         txtApellido.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
         txtApellido.setEnabled(false);
 
-        txtNumComposiciones.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        txtNumComposiciones.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         txtNumComposiciones.setEnabled(false);
 
         btnSalir.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
@@ -184,7 +184,7 @@ public class VentanaBuscarCliente extends javax.swing.JInternalFrame {
             }
         });
 
-        cbxCliente.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        cbxCliente.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         cbxCliente.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Clientes" }));
         cbxCliente.setEnabled(false);
         cbxCliente.addActionListener(new java.awt.event.ActionListener() {
@@ -193,7 +193,7 @@ public class VentanaBuscarCliente extends javax.swing.JInternalFrame {
             }
         });
 
-        txtEdadCantante.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        txtEdadCantante.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         txtEdadCantante.setEnabled(false);
 
         jLabel10.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
@@ -208,7 +208,7 @@ public class VentanaBuscarCliente extends javax.swing.JInternalFrame {
         jLabel12.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
         jLabel12.setText("Salario");
 
-        txtSalario.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        txtSalario.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         txtSalario.setEnabled(false);
 
         jLabel13.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
@@ -226,19 +226,19 @@ public class VentanaBuscarCliente extends javax.swing.JInternalFrame {
         jLabel15.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
         jLabel15.setText("Numero de sencillos");
 
-        txtNumSencillos.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        txtNumSencillos.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         txtNumSencillos.setEnabled(false);
 
         jLabel16.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
         jLabel16.setText("Numero de conciertos");
 
-        txtNumConciertos.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        txtNumConciertos.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         txtNumConciertos.setEnabled(false);
 
         jLabel17.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
         jLabel17.setText("Numero de giras");
 
-        txtNumGiras.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
+        txtNumGiras.setFont(new java.awt.Font("Hug Me Tight", 0, 14)); // NOI18N
         txtNumGiras.setEnabled(false);
 
         jLabel18.setFont(new java.awt.Font("Cookies and Cheese Bold", 1, 14)); // NOI18N
