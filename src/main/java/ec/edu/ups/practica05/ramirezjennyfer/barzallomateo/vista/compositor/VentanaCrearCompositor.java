@@ -231,7 +231,7 @@ public class VentanaCrearCompositor extends javax.swing.JInternalFrame {
                 int edad = Integer.parseInt(txtEdad.getText());
                 String nacionalidad = txtNacionalidad.getText();
                 double salario = Double.parseDouble(txtSalario.getText());
-                Compositor compositor = new Compositor(codigo, nombre, apellido, edad, nacionalidad, salario);
+                Compositor compositor = new Compositor(0,codigo, nombre, apellido, edad, nacionalidad, salario);
                 compositor.calcularSalario();
                 controladorCompositor.agregarCompositor(compositor);
                 JOptionPane.showMessageDialog(this, "Registro del compositor: " + compositor.getNombre());

@@ -43,7 +43,7 @@ public interface ICompositorDAO {
 
     public void updateCliente(Compositor compositor, Cantante anterior, Cantante nuevo);
 
-    public void deleteCliente(Compositor compositor, Cantante cantante);
+    public void deleteCliente(Compositor compositor, int codigo);
 
     public List<Cantante> findAllClientes(Compositor compositor);
 }

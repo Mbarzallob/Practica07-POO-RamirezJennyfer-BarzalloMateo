@@ -86,7 +86,7 @@ public class ControladorCompositor {
     public void eliminarCliente(Compositor compositor, Cantante cantante) {
         this.compositor = compositorDAO.read(compositor.getCodigo());
         this.cantante = cantanteDAO.read(cantante.getCodigo());
-        this.compositorDAO.deleteCliente(this.compositor, this.cantante);
+        this.compositorDAO.deleteCliente(this.compositor, this.cantante.getCodigo());
     }
 
     public List<Cantante> listarCantantes(Compositor compositor) {
